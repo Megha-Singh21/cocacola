@@ -1573,9 +1573,9 @@ body[data-layout=horizontal][data-layout-size=boxed] .navbar-header {
     --bs-sidebar-menu-sub-item-color: #545a6d;
     --bs-sidebar-menu-item-icon-color: #545a6d;
     --bs-sidebar-menu-item-icon-effact-color: rgba(84, 90, 109, 0.2);
-    --bs-sidebar-menu-item-hover-color: #5156be;
+    --bs-sidebar-menu-item-hover-color: #FF0100;
     --bs-sidebar-menu-item-hover-effact-color: rgba(81, 86, 190, 0.2);
-    --bs-sidebar-menu-item-active-color: #5156be;
+    --bs-sidebar-menu-item-active-color: #FF0100;
     --bs-sidebar-menu-item-active-effact-color: rgba(81, 86, 190, 0.2);
     --bs-sidebar-border-color: #e9e9ef;
     --bs-sidebar-menu-item-active-bg-color: #f3f8fb;
@@ -5575,5 +5575,14 @@ body[data-layout=horizontal] .chat-conversation {
 .averageUtilization{
     font-size: xxx-large;
     display: ruby-text;
-    color: #FEF4D7;
+    color: #FF656C;
+}
+.search{
+    background: red;
+}
+.search:hover{
+    background: red;
+}
+.bgColor{
+    background: red !important;
 }
