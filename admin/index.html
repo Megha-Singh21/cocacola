@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Coca Cola | Vendor </title>
+    <title>Coca Cola | Admin </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -29,6 +29,9 @@
     <link href="../../assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/charts/chart-7/assets/css/chart-7.css">
 </head>
 
 <body>
@@ -535,333 +538,194 @@
                     </div>
                     <!-- end page title -->
 
-                    <div class="row">
-                        <div class="col-xl-3 col-md-6">
-                            <!-- card -->
-                            <div class="card card-h-100">
-                                <!-- card body -->
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-6">
-                                            <!-- <span class="text-muted mb-3 lh-1 d-block text-truncate">My Wallet</span> -->
-                                            <h1 class="mb-3">
-                                                <b> <span class="counter-value" data-target="86">0</span>%</b>
-                                            </h1>
+
+                    <!-- ================================= Chart ====================================== -->
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card widget-card border-light shadow-sm">
+                                    <div class="card-body p-4">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5 class="card-title widget-card-title mb-1">Shipment Stats Details</h5>
+                                            <button type="button" class="btn btn-primary">Report</button>
                                         </div>
-
-                                        <div class="col-6">
-                                            <i class="fas fa-hand-holding-water averageUtilization"></i>
-                                            <!-- <img class="averageUtilization" src="../assets/images/02-Vender Dashboard/Average Volume Utilization.png" alt=""> -->
+                                        <p class="fs-7 text-secondary mb-4">Last 30 Days</p>
+                                        <div id="bsb-chart-7-small-1" class="mb-4"></div>
+                                        <div class="row gy-4">
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-primary-subtle text-primary rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-display"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">Delivery Status</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-primary-subtle text-primary rounded-2 py-1 px-2">60%</span>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-success-subtle text-success rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-tablet"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">Piked Up</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-success-subtle text-success rounded-2 py-1 px-2">25%</span>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-danger-subtle text-danger rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-phone"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">Delivered</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-danger-subtle text-danger rounded-2 py-1 px-2">15%</span>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="text-nowrap">
-                                        <span class="badge bg-success-subtle text-success font-size-13">Average Volume
-                                            Utilization</span>
-                                        <!-- <span class="ms-1 text-muted font-size-13">Since last week</span> -->
-                                    </div>
-                                </div><!-- end card body -->
-                            </div><!-- end card -->
-                        </div><!-- end col -->
-
-                        <div class="col-xl-3 col-md-6">
-                            <!-- card -->
-                            <div class="card card-h-100">
-                                <!-- card body -->
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-6">
-                                            <!-- <span class="text-muted mb-3 lh-1 d-block text-truncate">My Wallet</span> -->
-                                            <h1 class="mb-3">
-                                                <b> <span class="counter-value" data-target="86">0</span>%</b>
-                                            </h1>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <!-- <i class="fas fa-hand-holding-water "></i> -->
-                                            <i class="far fa-chart-bar averageUtilization"></i>
-                                        </div>
-                                    </div>
-                                    <div class="text-nowrap">
-                                        <span class="badge bg-danger-subtle text-danger font-size-13">Average Pallet
-                                            Utilization</span>
-                                        <!-- <span class="ms-1 text-muted font-size-13">Since last week</span> -->
-                                    </div>
-                                </div><!-- end card body -->
-                            </div><!-- end card -->
-                        </div><!-- end col-->
-
-                        <div class="col-xl-3 col-md-6">
-                            <!-- card -->
-                            <div class="card card-h-100">
-                                <!-- card body -->
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-6">
-                                            <!-- <span class="text-muted mb-3 lh-1 d-block text-truncate">My Wallet</span> -->
-                                            <h1 class="mb-3">
-                                                <b> <span class="counter-value" data-target="86">0</span>%</b>
-                                            </h1>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <i class="fas fa-boxes averageUtilization"></i>
-                                        </div>
-                                    </div>
-                                    <div class="text-nowrap">
-                                        <span class="badge bg-success-subtle text-success font-size-13">Average
-                                            Pieces</span>
-                                        <!-- <span class="ms-1 text-muted font-size-13">Since last week</span> -->
-                                    </div>
-                                </div><!-- end card body -->
-                            </div><!-- end card -->
-                        </div><!-- end col -->
-
-                        <div class="col-xl-3 col-md-6">
-                            <!-- card -->
-                            <div class="card card-h-100">
-                                <!-- card body -->
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-6">
-                                            <!-- <span class="text-muted mb-3 lh-1 d-block text-truncate">My Wallet</span> -->
-                                            <h1 class="mb-3">
-                                                <b> <span class="counter-value" data-target="86">0</span>%</b>
-                                            </h1>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <i class="fas fa-network-wired averageUtilization"></i>
-                                        </div>
-                                    </div>
-                                    <div class="text-nowrap">
-                                        <span class="badge bg-success-subtle text-success font-size-13">Average Stop Per
-                                            Load</span>
-                                        <!-- <span class="ms-1 text-muted font-size-13">Since last week</span> -->
-                                    </div>
-                                </div><!-- end card body -->
-                            </div><!-- end card -->
-                        </div><!-- end col -->
-
-                    </div><!-- end row-->
-
-                    <!-- ================================= 2nd Row ====================================== -->
-                    <div class="row mt-5">
-                        <div class="row">
-                            <div class="col-lg-4 mb-4">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4> <strong>Loads By Status</strong></h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <canvas id="donutChart1"></canvas>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 mb-4">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4> <strong>Loads By Carrier</strong></h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <canvas id="donutChart2"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 mb-4">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4> <strong>Loads by Service</strong></h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <canvas id="donutChart3"></canvas>
+
+
+                            <div class="col-md-6">
+                                <div class="card widget-card border-light shadow-sm">
+                                    <div class="card-body p-4">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5 class="card-title widget-card-title mb-1">Shipment by Carrier</h5>
+                                            <button type="button" class="btn btn-primary">Report</button>
+                                        </div>
+                                        <p class="fs-7 text-secondary mb-4">Overview</p>
+                                        <div id="bsb-chart-7-small-2" class="mb-4"></div>
+                                        <div class="row gy-4">
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-primary-subtle text-primary rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-display"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">AAA Coooper</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-primary-subtle text-primary rounded-2 py-1 px-2">60%</span>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-success-subtle text-success rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-tablet"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">Artur</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-success-subtle text-success rounded-2 py-1 px-2">25%</span>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-danger-subtle text-danger rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-phone"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">A Duie Pyle</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-danger-subtle text-danger rounded-2 py-1 px-2">15%</span>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <!-- ================================End of Chart ======================================= -->
 
-                        <script>
-                            // Data for Donut Charts
-                            const data1 = {
-                                labels: ['Red', 'Blue', 'Yellow'],
-                                datasets: [{
-                                    data: [300, 50, 100],
-                                    backgroundColor: ['#DD1D29', 'blue', 'yellow']
-                                }]
-                            };
-
-                            const data2 = {
-                                labels: ['Green', 'Purple', 'Orange'],
-                                datasets: [{
-                                    data: [200, 100, 150],
-                                    backgroundColor: ['green', 'purple', 'orange']
-                                }]
-                            };
-
-                            const data3 = {
-                                labels: ['Light Gray', 'Medium Gray', 'Dark Gray'],
-                                datasets: [{
-                                    data: [150, 120, 200],
-                                    backgroundColor: ['#cccccc', '#999999', '#666666']
-                                }]
-                            };
-
-                            // Options for Donut Charts
-                            const options = {
-                                responsive: true,
-                                maintainAspectRatio: false,
-                                cutoutPercentage: 50 // To make it a donut chart
-                            };
-
-                            // Render Donut Charts
-                            new Chart(document.getElementById('donutChart1'), {
-                                type: 'doughnut',
-                                data: data1,
-                                options: options
-                            });
-
-                            new Chart(document.getElementById('donutChart2'), {
-                                type: 'doughnut',
-                                data: data2,
-                                options: options
-                            });
-
-                            new Chart(document.getElementById('donutChart3'), {
-                                type: 'doughnut',
-                                data: data3,
-                                options: options
-                            });
-                        </script>
-                        <!-- ======================================================================= -->
-
-
-                        <!-- end col -->
-                    </div> <!-- end row-->
-                    <!-- ================================End of 2nd Row ======================================= -->
-
-                    <!-- ================================= Table ====================================== -->
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2 class="card-title">Recent Optimazation Jobs</h2>
-                                    <!-- <p class="card-title-desc">This is an experimental awesome solution for responsive
-                                        tables with complex data.</p> -->
-                                </div>
-                                <div class="card-body">
-                                    <div class="table-rep-plugin">
-                                        <div class="table-responsive mb-0" data-pattern="priority-columns">
-                                            <table id="tech-companies-1" class="table border">
-                                                <thead class="bgColor">
-                                                    <tr>
-                                                        <th>Qu ID</th>
-                                                        <th data-priority="1">Palate ID</th>
-                                                        <th data-priority="3">Complete Overview File</th>
-                                                        <th data-priority="1">Start Date & Time</th>
-                                                        <th data-priority="3">Duration</th>
-                                                        <th data-priority="3">No of Shipments</th>
-                                                        <th data-priority="6">No of Loads</th>
-                                                        <th data-priority="6">Uncountable Shipments</th>
-                                                        <th data-priority="6">Status</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>6660</th>
-                                                        <td>2018</td>
-                                                        <td>ConstraintsOverrideDS_LTG.txt</td>
-                                                        <td>30 Dec 2020 - 12:09:03</td>
-                                                        <td>0.00:04</td>
-                                                        <td>4</td>
-                                                        <td>0</td>
-                                                        <td>4</td>
-                                                        <td><span
-                                                                class="badge bg-success-subtle text-success font-size-12">Completed</span>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <th>6660</th>
-                                                        <td>2018</td>
-                                                        <td>-</td>
-                                                        <td>30 Dec 2020 - 12:09:03</td>
-                                                        <td>0.00:04</td>
-                                                        <td>1</td>
-                                                        <td>0</td>
-                                                        <td>4</td>
-                                                        <td><span
-                                                                class="badge bg-success-subtle text-success font-size-12">Completed</span>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <th>6660</th>
-                                                        <td>2018</td>
-                                                        <td>ConstraintsOverrideDS_LTG.txt</td>
-                                                        <td>30 Dec 2020 - 12:09:03</td>
-                                                        <td>0.00:04</td>
-                                                        <td>4</td>
-                                                        <td>2</td>
-                                                        <td>4</td>
-                                                        <td><span
-                                                                class="badge bg-success-subtle text-success font-size-12">Completed</span>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <th>6660</th>
-                                                        <td>2018</td>
-                                                        <td>ConstraintsOverrideDS_LTG.txt</td>
-                                                        <td>30 Dec 2020 - 12:09:03</td>
-                                                        <td>0.00:04</td>
-                                                        <td>4</td>
-                                                        <td>0</td>
-                                                        <td>4</td>
-                                                        <td><span
-                                                                class="badge bg-success-subtle text-success font-size-12">Completed</span>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <th>6660</th>
-                                                        <td>2018</td>
-                                                        <td>ConstraintsOverrideDS_LTG.txt</td>
-                                                        <td>30 Dec 2020 - 12:09:03</td>
-                                                        <td>0.00:04</td>
-                                                        <td>4</td>
-                                                        <td>0</td>
-                                                        <td>4</td>
-                                                        <td><span
-                                                                class="badge bg-success-subtle text-success font-size-12">Completed</span>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <th>6660</th>
-                                                        <td>2018</td>
-                                                        <td>ConstraintsOverrideDS_LTG.txt</td>
-                                                        <td>30 Dec 2020 - 12:09:03</td>
-                                                        <td>0.00:04</td>
-                                                        <td>4</td>
-                                                        <td>0</td>
-                                                        <td>4</td>
-                                                        <td><span
-                                                                class="badge bg-success-subtle text-success font-size-12">Completed</span>
-                                                        </td>
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- end card -->
-                        </div> <!-- end col -->
-                    </div> <!-- end row -->
-                    <!-- ================================= End of Table ====================================== -->
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -1035,7 +899,11 @@
     <!-- pace js -->
     <script src="../assets/libs/pace-js/pace.min.js"></script>
 
+    <!-- apexcharts js -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
 
+    <!-- apexcharts init -->
+    <script src="../assets/js/pages/apexcharts.init.js"></script>
 
     <!-- Plugins js-->
     <script src="../assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
@@ -1044,6 +912,50 @@
     <script src="../assets/js/pages/dashboard.init.js"></script>
 
     <script src="../assets/js/app.js"></script>
+
+    <!-- Doanat Chart -->
+    <!-- Bootstrap JavaScript -->
+   
+    <script>
+        // Initialize ApexCharts
+        var options1 = {
+            chart: {
+                type: 'donut',
+                height: '200', // Adjust height as needed
+            },
+            series: [60, 25, 15], // Example data
+            labels: ['Desktop', 'Tablet', 'Mobile'], // Example labels
+            colors: ['#007bff', '#28a745', '#dc3545'], // Example colors
+            dataLabels: {
+                enabled: true, // Enable data labels
+                formatter: function (val, opts) {
+                    return opts.w.globals.labels[opts.seriesIndex] + ": " + val + "%";
+                }
+            },
+        };
+
+        var options2 = {
+            chart: {
+                type: 'donut',
+                height: '200', // Adjust height as needed
+            },
+            series: [70, 20, 10], // Example data
+            labels: ['Desktop', 'Tablet', 'Mobile'], // Example labels
+            colors: ['#007bff', '#28a745', '#dc3545'], // Example colors
+            dataLabels: {
+                enabled: true, // Enable data labels
+                formatter: function (val, opts) {
+                    return opts.w.globals.labels[opts.seriesIndex] + ": " + val + "%";
+                }
+            },
+        };
+
+        var chart1 = new ApexCharts(document.getElementById("bsb-chart-7-small-1"), options1);
+        chart1.render();
+
+        var chart2 = new ApexCharts(document.getElementById("bsb-chart-7-small-2"), options2);
+        chart2.render();
+    </script>
 
 </body>
 

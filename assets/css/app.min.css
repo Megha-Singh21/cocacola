@@ -1573,9 +1573,9 @@ body[data-layout=horizontal][data-layout-size=boxed] .navbar-header {
     --bs-sidebar-menu-sub-item-color: #545a6d;
     --bs-sidebar-menu-item-icon-color: #545a6d;
     --bs-sidebar-menu-item-icon-effact-color: rgba(84, 90, 109, 0.2);
-    --bs-sidebar-menu-item-hover-color: #FF0100;
+    --bs-sidebar-menu-item-hover-color: #DD1D29;
     --bs-sidebar-menu-item-hover-effact-color: rgba(81, 86, 190, 0.2);
-    --bs-sidebar-menu-item-active-color: #FF0100;
+    --bs-sidebar-menu-item-active-color: #DD1D29;
     --bs-sidebar-menu-item-active-effact-color: rgba(81, 86, 190, 0.2);
     --bs-sidebar-border-color: #e9e9ef;
     --bs-sidebar-menu-item-active-bg-color: #f3f8fb;
@@ -5578,11 +5578,23 @@ body[data-layout=horizontal] .chat-conversation {
     color: #FF656C;
 }
 .search{
-    background: red;
+    background: #DD1D29;
 }
 .search:hover{
-    background: red;
+    background: #DD1D29;
+}
+
+
+.cardMovidu{
+    margin-top: 270px !important;
+    background-color: #DD1D29;
+    color: white;
+    border-radius: 15px;
+}
+.worisgo{
+    color: white !important;
 }
 .bgColor{
-    background: red !important;
+    --bs-table-bg: #DD1D29;
+    --bs-table-color: white;
 }
