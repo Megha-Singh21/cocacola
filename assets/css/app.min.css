@@ -5598,3 +5598,11 @@ body[data-layout=horizontal] .chat-conversation {
     --bs-table-bg: #DD1D29;
     --bs-table-color: white;
 }
+.custom-progress-bar{
+    background-color: #FEC9C8;
+    color: #DD1D29;
+    
+}
+.viewReport{
+    background-color: #DD1D29;
+}

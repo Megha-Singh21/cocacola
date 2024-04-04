@@ -32,7 +32,45 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/charts/chart-7/assets/css/chart-7.css">
+
+
+    <!-- Include FusionCharts core library -->
+    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+
+    <!-- Include FusionCharts theme -->
+    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
+
+<style>
+    #labels-container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #chart-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    #chart-legend {
+        margin-top: 20px;
+        /* Add margin to the top of the legend */
+    }
+
+    .chart-label {
+        position: absolute;
+        bottom: px;
+        /* Adjust the position as needed */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+</style>
 
 <body>
 
@@ -547,7 +585,7 @@
                                     <div class="card-body p-4">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <h5 class="card-title widget-card-title mb-1">Shipment Stats Details</h5>
-                                            <button type="button" class="btn btn-primary">Report</button>
+                                            <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
                                         </div>
                                         <p class="fs-7 text-secondary mb-4">Last 30 Days</p>
                                         <div id="bsb-chart-7-small-1" class="mb-4"></div>
@@ -638,7 +676,7 @@
                                     <div class="card-body p-4">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <h5 class="card-title widget-card-title mb-1">Shipment by Carrier</h5>
-                                            <button type="button" class="btn btn-primary">Report</button>
+                                            <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
                                         </div>
                                         <p class="fs-7 text-secondary mb-4">Overview</p>
                                         <div id="bsb-chart-7-small-2" class="mb-4"></div>
@@ -726,28 +764,428 @@
                     </div>
                     <!-- ================================End of Chart ======================================= -->
 
-                </div>
-                <!-- container-fluid -->
-            </div>
-            <!-- End Page-content -->
-
-
-            <footer class="footer">
-                <div class="container-fluid">
+                    <!-- 2nd Row -->
                     <div class="row">
-                        <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Movidu.
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by <a href="#!" class="text-decoration-underline">MS</a>
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div
+                                    class="card-header mt-2 border-0 bg-transparent d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">Carrier On Time(%)</h5>
+                                    <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
+                                </div>
+                                <hr>
+                                <div class="card-body">
+                                    <div id="progressBars">
+                                        <!-- Progress bar 1 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">A Dule Pyle</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+                                                        aria-valuemax="100">70%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 2 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Coyote Logistics</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">40%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 3 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Estes Express</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 80%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">80%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 4 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">New England Motor Freight</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 30%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">30%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 5 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">R+L Carriers</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 49%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">49%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 6 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Southeastern Freight Lines</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">40%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 7 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">UPS Freight</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 35%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">35%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 8 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">UPS Parcel</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 67%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">67%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 9 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Westgate Global Logistics</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 29%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">29%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 10 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">XPO Logistics</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 90%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">90%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 11 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">YRC Freight</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 68%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">68%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Add more progress bars here -->
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+
+                        <!-- Performance as SLA -->
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div
+                                    class="card-header mt-2 border-0 bg-transparent d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">Performance as SLA</h5>
+                                    <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
+                                </div>
+                                <hr>
+                                <div class="card-body">
+                                    <div id="progressBars">
+                                        <!-- Progress bar 1 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">A Dule Pyle</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+                                                        aria-valuemax="100">Delhi Road | 70%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 2 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Coyote Logistics</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">Mumbai | 40%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 3 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Estes Express</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 80%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">Lucknow | 80%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 4 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">New England Motor Freight</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 30%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">Bangaolre | 30%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 5 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">R+L Carriers</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 49%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">Pune | 49%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 6 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Southeastern Freight Lines</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">Simla | 40%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 7 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">UPS Freight</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 35%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">Kerla | 35%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 8 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">UPS Parcel</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 67%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">Siwan | 67%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 9 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Westgate Global Logistics</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 29%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">BTM | 29%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 10 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">XPO Logistics</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 90%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">Mathura | 90%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 11 -->
+                                        <div class="row align-items-center border-bottom pb-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">YRC Freight</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress w-100">
+                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
+                                                        style="width: 68%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">Punjab | 68%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Add more progress bars here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Performance as SLA -->
+                    </div>
+                    <!-- End of 2nd Row -->
+
+                    <!-- 3nd Row -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div
+                                    class="card-header mt-2 border-0 bg-transparent d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">Awarded Carriers By Month</h5>
+                                    <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
+                                </div>
+                                <hr>
+                                <div class="card-body">
+                                    <div id="chart-container" class="container">
+                                        <div class="row pb-4">
+                                            <div class="col-lg-12">
+                                                <canvas id="myChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Performance as SLA -->
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div
+                                    class="card-header mt-2 border-0 bg-transparent d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">Shipment Activity By Month </h5>
+                                    <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
+                                </div>
+                                <hr>
+                                <div class="card-body">
+                                    <div id="chart-container mt-5">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                              <canvas id="myChartmonth"></canvas>
+                                              <div class="chart-label">Pickup Date</div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-lg-12">
+                                              <div id="chart-legend" style="text-align: center;"></div> 
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Performance as SLA -->
+                    </div>
+                    <!-- end of 3rd row -->
+                </div>
+            </div>
+            <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+        <!-- test -->
+
+        <!-- end -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <script>document.write(new Date().getFullYear())</script> © Movidu.
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                            Design & Develop by <a href="#!" class="text-decoration-underline">MS</a>
                         </div>
                     </div>
                 </div>
-            </footer>
-        </div>
-        <!-- end main content-->
+            </div>
+        </footer>
+    </div>
+    <!-- end main content-->
 
     </div>
     <!-- END layout-wrapper -->
@@ -913,9 +1351,98 @@
 
     <script src="../assets/js/app.js"></script>
 
+
+    <!-- 3rd Row Chart Script -->
+    <script>
+        // Sample data for demonstration
+        const labels = [];
+        const data1 = [];
+        const data2 = [];
+        const data3 = [];
+        const data4 = [];
+        const data5 = [];
+        const data6 = [];
+
+        // Generate sample data for 24 months
+        for (let i = 1; i <= 24; i++) {
+            const month = (i % 12 === 0) ? 12 : i % 12;
+            const year = (i <= 12) ? 2023 : 2024;
+            labels.push(getMonthName(month) + ' ' + year);
+            data1.push(Math.floor(Math.random() * 100)); // Random data for dataset 1
+            data2.push(Math.floor(Math.random() * 100)); // Random data for dataset 2
+            data3.push(Math.floor(Math.random() * 100)); // Random data for dataset 3
+            data4.push(Math.floor(Math.random() * 100)); // Random data for dataset 4
+            data5.push(Math.floor(Math.random() * 100)); // Random data for dataset 5
+            data6.push(Math.floor(Math.random() * 100)); // Random data for dataset 6
+        }
+
+        // Create a chart
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'UPS Parcel',
+                    data: data1,
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderWidth: 1
+                }, {
+                    label: 'A Duje Pyle',
+                    data: data2,
+                    backgroundColor: 'rgb(54, 162, 235)',
+                    borderWidth: 1
+                }, {
+                    label: 'AAA Cooper',
+                    data: data3,
+                    backgroundColor: 'rgb(75, 192, 192)',
+                    borderWidth: 1
+                }, {
+                    label: 'Estesl',
+                    data: data4,
+                    backgroundColor: 'rgb(255, 205, 86)',
+                    borderWidth: 1
+                }, {
+                    label: 'HHH Parcel',
+                    data: data5,
+                    backgroundColor: 'rgb(153, 102, 255)',
+                    borderWidth: 1
+                }, {
+                    label: 'XYZ Cooper',
+                    data: data6,
+                    backgroundColor: 'rgb(255, 159, 64)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            autoSkip: false,
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }]
+                }
+            }
+        });
+
+        // Function to get month name
+        function getMonthName(month) {
+            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            return monthNames[month - 1];
+        }
+    </script>
+    <!-- End of 3r Row Script -->
+
     <!-- Doanat Chart -->
     <!-- Bootstrap JavaScript -->
-   
+
     <script>
         // Initialize ApexCharts
         var options1 = {
@@ -956,6 +1483,69 @@
         var chart2 = new ApexCharts(document.getElementById("bsb-chart-7-small-2"), options2);
         chart2.render();
     </script>
+
+    <!-- Shipment Activity Script -->
+    <script>
+        // Sample data for demonstration
+        let months = [];
+        const data = [];
+    
+        // Generate sample data for 24 months (2 years)
+        for (let i = 0; i < 24; i++) {
+          const month = (i % 12 === 0) ? 1 : (i % 12) + 1;
+          const year = 2023 + Math.floor(i / 12);
+          months.push(getMonthName(month) + ' ' + year);
+          if (i === 0) {
+            data.push(0); // Start from 0 for the first month
+          } else {
+            data.push(Math.floor(Math.random() * 100)); // Random data for other months
+          }
+        }
+    
+        // Create a chart
+        var ctx = document.getElementById('myChartmonth').getContext('2d');
+        var myChartmonth = new Chart(ctx, {
+          type: 'line', // Use line chart type
+          data: {
+            labels: months,
+            datasets: [{
+              label: "Record Count",
+              data: data,
+              borderColor: "rgb(0, 123, 255)",
+              borderWidth: 2,
+              backgroundColor: "transparent",
+              fill: false
+            }]
+          },
+          options: {
+            scales: {
+              xAxes: [{
+                reverse: true,
+                gridLines: {
+                  color: "rgba(0,0,0,0.05)"
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true // Start y-axis at 0
+                },
+                borderDash: [5, 5],
+                gridLines: {
+                  color: "rgba(0,0,0,0)",
+                  fontColor: "#fff"
+                }
+              }]
+            }
+          }
+        });
+    
+        // Function to get abbreviated month name
+        function getMonthName(month) {
+          const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+          return monthNames[month - 1];
+        }
+      </script>
+    <!-- end -->
 
 </body>
 
