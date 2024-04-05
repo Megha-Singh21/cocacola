@@ -5606,3 +5606,25 @@ body[data-layout=horizontal] .chat-conversation {
 .viewReport{
     background-color: #DD1D29;
 }
+/* td:nth-child(7), td:nth-child(8), td:nth-child(9), td:nth-child(10) {
+    background-color: #ffcccc17;;
+    
+  }
+  th:nth-child(7), th:nth-child(8), th:nth-child(9), th:nth-child(10) {
+    background-color: #ffcccc17;;
+    color: black;
+    border: 1px solid black;
+  } */
+
+
+  .nav-pills .nav-link.active {
+    background-color: red;
+}
+/* .bgColorSecond{
+    --bs-table-bg: #dd531dac;
+    --bs-table-color: rgb(255, 255, 255);
+}
+.bgColorInbound{
+    --bs-table-bg: #482213ac;
+    --bs-table-color: rgb(255, 255, 255);
+} */

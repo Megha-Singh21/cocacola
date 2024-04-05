@@ -28,11 +28,10 @@
     <!-- App Css-->
     <link href="../../assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/charts/chart-7/assets/css/chart-7.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Include FusionCharts core library -->
     <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
@@ -41,7 +40,6 @@
     <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -285,7 +283,12 @@
                                 <span data-key="t-dashboard">Dashboard</span>
                             </a>
                         </li>
-
+                        <li>
+                            <a href="vendor.html">
+                                <i data-feather="layout"></i>
+                                <span data-key="t-horizontal">Vendor</span>
+                            </a>
+                        </li>
                         <!-- <li>
                             <a href="javascript: void(0);" class="has-arrow">
                                 <i data-feather="grid"></i>
@@ -1353,6 +1356,7 @@
 
 
     <!-- 3rd Row Chart Script -->
+    <!-- Awarded Carriers By Month -->
     <script>
         // Sample data for demonstration
         const labels = [];
@@ -1363,10 +1367,10 @@
         const data5 = [];
         const data6 = [];
 
-        // Generate sample data for 24 months
-        for (let i = 1; i <= 24; i++) {
-            const month = (i % 12 === 0) ? 12 : i % 12;
-            const year = (i <= 12) ? 2023 : 2024;
+        // Generate sample data for 12 months (2024)
+        for (let i = 1; i <= 12; i++) {
+            const month = i;
+            const year = 2024;
             labels.push(getMonthName(month) + ' ' + year);
             data1.push(Math.floor(Math.random() * 100)); // Random data for dataset 1
             data2.push(Math.floor(Math.random() * 100)); // Random data for dataset 2
@@ -1438,6 +1442,7 @@
             return monthNames[month - 1];
         }
     </script>
+    <!-- End Awarded Carriers By Month -->
     <!-- End of 3r Row Script -->
 
     <!-- Doanat Chart -->
