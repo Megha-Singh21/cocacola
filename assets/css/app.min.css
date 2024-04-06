@@ -5628,3 +5628,27 @@ body[data-layout=horizontal] .chat-conversation {
     --bs-table-bg: #482213ac;
     --bs-table-color: rgb(255, 255, 255);
 } */
+
+@media (max-width: 576px) {
+    .nav-pills {
+        display: none;
+    }
+}
+@media (min-width: 576px) {
+    .select-tab {
+        display: none;
+    }
+}
+
+.select-tab select {
+    background-color: red;
+    color: white;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 20px; /* Adjust according to your icon size */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="white" d="M256 352l192-192H64z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 5px) center;
+}
