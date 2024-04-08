@@ -5652,3 +5652,55 @@ body[data-layout=horizontal] .chat-conversation {
     background-repeat: no-repeat;
     background-position: calc(100% - 5px) center;
 }
+
+/* Vendor Name Tooltip */
+.custom-tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  .tooltip-content {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 5px);
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 9999;
+    width: 320px; /* Increased width */
+  }
+  .tooltip-content-header {
+    background-color: #DD1D29;
+    border-bottom: 1px solid #DD1D29;
+    padding: 10px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+  }
+  .contactDetails{
+    color: white;
+  }
+  .tooltip-content-body {
+    padding: 10px;
+  }
+  .custom-tooltip:hover .tooltip-content {
+    display: block;
+  }
+  @media (max-width: 576px) {
+    .custom-tooltip {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .tooltip-content {
+      position: static;
+      display: none;
+    }
+    .custom-tooltip:hover .tooltip-content {
+      display: block;
+    }
+  }
+
+ 
