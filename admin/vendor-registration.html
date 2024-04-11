@@ -599,30 +599,30 @@
                         <div class="row justify-content-center">
 
                             <div class="row mb-5 ">
+
                                 <div class="col-md-3 mt-2">
-                                    <select class="form-select">
-                                        <option selected>Select Option 1</option>
-                                        <option value="1">Option 1.1</option>
-                                        <option value="2">Option 1.2</option>
-                                        <option value="3">Option 1.3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3 mt-2">
-                                    <!-- Select Option 2 -->
-                                    <select class="form-select">
-                                        <option selected>Select Option 2</option>
-                                        <option value="1">Option 2.1</option>
-                                        <option value="2">Option 2.2</option>
-                                        <option value="3">Option 2.3</option>
-                                    </select>
+                                    <form class="app-search d-none d-lg-block p-0">
+                                        <div class="position-relative">
+                                            <input type="text" class="form-control" placeholder="Name, Email, Number">
+                                            <button class="btn btn-primary search" type="button"><i
+                                                    class="bx bx-search-alt align-middle"></i></button>
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="col-md-3 mt-2">
                                     <!-- Select Option 3 -->
                                     <select class="form-select">
-                                        <option selected>Select Option 3</option>
-                                        <option value="1">Option 3.1</option>
-                                        <option value="2">Option 3.2</option>
-                                        <option value="3">Option 3.3</option>
+                                        <option selected>Ownership Type</option>
+                                        <option value="1">Private Ltd.</option>
+                                        <option value="2">Partnership</option>
+                                        <option value="3">Sole Proprietor </option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mt-2">
+                                    <select class="form-select">
+                                        <option selected>Route Wise</option>
+                                        <option value="1">One Way</option>
+                                        <option value="2">Two Way</option>
                                     </select>
                                 </div>
                                 <div class="col-md-3 mt-2">
@@ -664,12 +664,14 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="flex-grow-1 mb-3 mb-md-0">
+                                    <!-- Search Filter -->
+                                    <!-- <div class="flex-grow-1 mb-3 mb-md-0">
                                         <div class="input-group">
                                             <input type="text" id="searchInput" class="form-control"
                                                 placeholder="Search...">
                                         </div>
-                                    </div>
+                                    </div> -->
+                                    <!-- End of search Filter -->
                                     <div class="flex-shrink-0">
                                         <div class="select-tab">
                                             <select class="form-select" id="tabSelect" aria-label="Select Tab">
@@ -701,12 +703,13 @@
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th></th>
-                                                                <th class="text-center font-size-20" colspan="4">LSP
+                                                                <th class="text-center font-size-20" colspan="5">LSP
                                                                     Quote</th>
 
                                                             </tr>
                                                             <tr>
                                                                 <th>Name</th>
+                                                                <th>Ownership Type </th>
                                                                 <th>Cluster</th>
                                                                 <th>One Way Two Way</th>
                                                                 <th>Sending</th>
@@ -728,7 +731,9 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan </span><i
+                                                                            class="fas fa-info-circle"
+                                                                            style="color: red;"></i>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -745,6 +750,19 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Private Ltd. </span>
+                                                                        <div class="icon-right">
+                                                                            <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i>
+                                                                        </div>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -764,7 +782,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -781,6 +800,19 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class=" d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Partnership </span>
+                                                                        <div class="icon-right">
+                                                                            <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i>
+                                                                        </div>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -800,7 +832,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram </span>
+                                                                        <span>Ram <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -817,6 +850,19 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Sole Proprietor </span>
+                                                                        <div class="icon-right">
+                                                                            <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i>
+                                                                        </div>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -836,7 +882,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -853,6 +900,19 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Sole Proprietor </span>
+                                                                        <div class="icon-right">
+                                                                            <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i>
+                                                                        </div>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -872,7 +932,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -889,6 +950,19 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Sole Proprietor </span>
+                                                                        <div class="icon-right">
+                                                                            <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i>
+                                                                        </div>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -908,7 +982,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -925,6 +1000,19 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class=" d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Partnership </span>
+                                                                        <div class="icon-right">
+                                                                            <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i>
+                                                                        </div>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -944,7 +1032,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -961,6 +1050,19 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Private Ltd. </span>
+                                                                        <div class="icon-right">
+                                                                            <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i>
+                                                                        </div>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -998,12 +1100,13 @@
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th></th>
-                                                                <th class="text-center font-size-20" colspan="4">LSP
+                                                                <th class="text-center font-size-20" colspan="5">LSP
                                                                     Quote</th>
 
                                                             </tr>
                                                             <tr>
                                                                 <th>Name</th>
+                                                                <th>Ownership Type</th>
                                                                 <th>Cluster</th>
                                                                 <th>One Way Two Way</th>
                                                                 <th>Sending</th>
@@ -1025,7 +1128,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -1042,6 +1146,16 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-tooltip d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Private Ltd. <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i></span>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -1061,7 +1175,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -1078,6 +1193,17 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-tooltip d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Sole Proprietorship <i
+                                                                                class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i></span>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -1098,7 +1224,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -1115,6 +1242,16 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-tooltip d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Partnership <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i></span>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -1134,7 +1271,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -1151,6 +1289,15 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-tooltip d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Private Ltd. <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i></span>
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -1188,12 +1335,13 @@
                                                                 <th></th>
                                                                 <th></th>
                                                                 <th></th>
-                                                                <th class="text-center font-size-20" colspan="4">LSP
+                                                                <th class="text-center font-size-20" colspan="5">LSP
                                                                     Quote</th>
 
                                                             </tr>
                                                             <tr>
                                                                 <th>Name</th>
+                                                                <th>Ownership Type</th>
                                                                 <th>Cluster</th>
                                                                 <th>One Way Two Way</th>
                                                                 <th>Sending</th>
@@ -1215,7 +1363,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -1232,6 +1381,16 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-tooltip d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Private Ltd. <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i></span>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -1251,7 +1410,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -1268,6 +1428,16 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-tooltip d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Partnership <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i></span>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -1287,7 +1457,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -1304,6 +1475,16 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-tooltip d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Private Ltd. <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i></span>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -1323,7 +1504,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -1340,6 +1522,16 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-tooltip d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Private Ltd. <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i></span>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -1359,7 +1551,8 @@
                                                                 <td>
                                                                     <div class="custom-tooltip"
                                                                         data-bs-placement="right">
-                                                                        <span>Ram Charan</span>
+                                                                        <span>Ram Charan <i class="fas fa-info-circle"
+                                                                                style="color: red;"></i></span>
                                                                         <div class="tooltip-content">
                                                                             <div class="tooltip-content-header">
                                                                                 <h6 class="mb-0 contactDetails">
@@ -1376,6 +1569,16 @@
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-tooltip d-flex justify-content-between align-items-center"
+                                                                        data-bs-placement="right">
+                                                                        <span>Private Ltd. <i class="fas fa-info-circle"
+                                                                                style="color: red;"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#submitedDocument"></i></span>
+
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -1399,6 +1602,35 @@
                                         </div>
                                         <!-- End of Inbound Table -->
                                     </div>
+                                    <!-- Pagination -->
+                                    <div class="container-fluide mt-5">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6 col-12 text-md-start text-center mb-md-0 mb-3">
+                                                <p class="mb-0">Showing 1 to 7 of 7</p>
+                                            </div>
+                                            <div class="col-md-6 col-12 text-md-end text-center">
+                                                <div class="d-flex justify-content-end align-items-center">
+                                                    <label for="recordsPerPage" class="form-label me-2 mb-0">Per
+                                                        Page:</label>
+                                                    <select id="recordsPerPage" class="form-select">
+                                                        <option value="10" selected>10</option>
+                                                        <option value="20">20</option>
+                                                        <option value="50">50</option>
+                                                    </select>
+                                                    <ul id="pagination" class="pagination mb-0 ms-2">
+                                                        <li class="page-item" id="previous"><a class="page-link"
+                                                                href="#">Previous</a></li>
+                                                        <!-- Page numbers will be dynamically added here -->
+                                                        <li class="page-item" id="next"><a class="page-link"
+                                                                href="#">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--End of Pagination  -->
                                 </div><!-- end card-body -->
                             </div><!-- end card -->
                         </div><!-- end col -->
@@ -1407,7 +1639,58 @@
                 </div>
                 <!-- ================================End of Chart ======================================= -->
 
+                <!-- modal -->
+                <div class="modal fade" id="submitedDocument" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header submitDocumnetHeader">
+                                <h5 class="modal-title" id="exampleModalLabel">Submited Document List
+                                </h5>
+                                <button type="button" class="btn btnCloseModal" data-bs-dismiss="modal"
+                                    aria-label="Close"><i class="mdi mdi-close-box"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table">
 
+                                        <tbody>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2">Memorandum of Association (MoA) and Articles of
+                                                    Association (AoA) <i class="fas fa-download download-icon"></i></li>
+                                                <li class="mb-2">Certificate of Incorporation <i
+                                                        class="fas fa-download download-icon"></i></li>
+                                                <li class="mb-2">Director Identification Number (DIN) for directors <i
+                                                        class="fas fa-download download-icon"></i></li>
+                                                <li class="mb-2">Digital Signature Certificates (DSC) for authorized
+                                                    signatories <i class="fas fa-download download-icon"></i></li>
+                                                <li class="mb-2">PAN card <i class="fas fa-download download-icon"></i>
+                                                </li>
+                                                <li class="mb-2">TAN (Tax Deduction and Collection Account Number) for
+                                                    tax purposes <i class="fas fa-download download-icon"></i></li>
+                                                <li class="mb-2">Address proof for the registered office <i
+                                                        class="fas fa-download download-icon"></i></li>
+                                                <li class="mb-2">Share certificates <i
+                                                        class="fas fa-download download-icon"></i></li>
+                                                <li class="mb-2">Bank account documents <i
+                                                        class="fas fa-download download-icon"></i></li>
+                                                <li class="mb-2">Board resolution and minutes of meetings <i
+                                                        class="fas fa-download download-icon"></i></li>
+                                                <li class="mb-2">Financial statements and audit reports <i
+                                                        class="fas fa-download download-icon"></i></li>
+                                            </ul>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary close"
+                                    data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of Modal -->
 
             </div>
         </div>
@@ -1622,6 +1905,84 @@
 
         });
     </script>
+
+    <!-- Pagenation  -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const pagination = document.getElementById("pagination");
+            const previousButton = document.getElementById("previous");
+            const nextButton = document.getElementById("next");
+            const totalPages = 5; // Total number of pages
+            let currentPage = 1;
+
+            // Initial page load
+            updatePagination();
+
+            // Event listeners for previous and next buttons
+            previousButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                if (currentPage > 1) {
+                    currentPage--;
+                    updatePagination();
+                }
+            });
+
+            nextButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updatePagination();
+                }
+            });
+
+            // Function to update pagination
+            function updatePagination() {
+                // Clear previous page numbers
+                pagination.innerHTML = "";
+
+                // Add previous button
+                if (currentPage > 1) {
+                    pagination.appendChild(createPageLink(currentPage - 1, "Previous"));
+                } else {
+                    previousButton.classList.add("disabled");
+                }
+
+                // Add page numbers
+                for (let i = 1; i <= totalPages; i++) {
+                    pagination.appendChild(createPageLink(i));
+                }
+
+                // Add next button
+                if (currentPage < totalPages) {
+                    pagination.appendChild(createPageLink(currentPage + 1, "Next"));
+                } else {
+                    nextButton.classList.add("disabled");
+                }
+            }
+
+            // Function to create page link element
+            function createPageLink(pageNumber, label = pageNumber) {
+                const li = document.createElement("li");
+                li.classList.add("page-item");
+                const link = document.createElement("a");
+                link.classList.add("page-link");
+                link.href = "#";
+                link.textContent = label;
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    currentPage = pageNumber;
+                    updatePagination();
+                });
+                li.appendChild(link);
+                if (currentPage === pageNumber) {
+                    li.classList.add("active");
+                }
+                return li;
+            }
+        });
+    </script>
+    <!-- End of pagenation -->
+
 
 </body>
 

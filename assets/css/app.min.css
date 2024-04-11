@@ -5578,16 +5578,16 @@ body[data-layout=horizontal] .chat-conversation {
     color: #FF656C;
 }
 .search{
-    background: #DD1D29;
+    background: #E1202C;
 }
 .search:hover{
-    background: #DD1D29;
+    background: #E1202C;
 }
 
 
 .cardMovidu{
     margin-top: 270px !important;
-    background-color: #DD1D29;
+    background-color: #E1202C;
     color: white;
     border-radius: 15px;
 }
@@ -5595,16 +5595,16 @@ body[data-layout=horizontal] .chat-conversation {
     color: white !important;
 }
 .bgColor{
-    --bs-table-bg: #DD1D29;
+    --bs-table-bg: #E1202C;
     --bs-table-color: white;
 }
 .custom-progress-bar{
     background-color: #FEC9C8;
-    color: #DD1D29;
+    color: #E1202C;
     
 }
 .viewReport{
-    background-color: #DD1D29;
+    background-color: #E1202C;
 }
 /* td:nth-child(7), td:nth-child(8), td:nth-child(9), td:nth-child(10) {
     background-color: #ffcccc17;;
@@ -5618,7 +5618,7 @@ body[data-layout=horizontal] .chat-conversation {
 
 
   .nav-pills .nav-link.active {
-    background-color: red;
+    background-color: #E1202C;
 }
 /* .bgColorSecond{
     --bs-table-bg: #dd531dac;
@@ -5641,7 +5641,7 @@ body[data-layout=horizontal] .chat-conversation {
 }
 
 .select-tab select {
-    background-color: red;
+    background-color: #E1202C;
     color: white;
     border: none;
     appearance: none;
@@ -5660,9 +5660,9 @@ body[data-layout=horizontal] .chat-conversation {
   }
   .tooltip-content {
     position: absolute;
-    top: 50%;
+    top: 5%;
     left: calc(100% + 5px);
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -5670,11 +5670,11 @@ body[data-layout=horizontal] .chat-conversation {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     z-index: 9999;
-    width: 320px; /* Increased width */
+    width: 330px; 
   }
   .tooltip-content-header {
-    background-color: #DD1D29;
-    border-bottom: 1px solid #DD1D29;
+    background-color: #E1202C;
+    border-bottom: 1px solid #E1202C;
     padding: 10px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -5700,7 +5700,40 @@ body[data-layout=horizontal] .chat-conversation {
     }
     .custom-tooltip:hover .tooltip-content {
       display: block;
+      
     }
   }
+.submitDocumnetHeader{
+    background: #E1202C;
+   
+}
+.eventLog{
+    background: #E1202C;
+}
+.close{
+    background: #E1202C;
+    color: white;
+}
+#exampleModalLabel{
+    color: #fff;
+}
+ /* .routeAdd{
+ background-color: red;
+}
+.routeAdd:hover{
+    background-color: red;
+   } */
+   #recordsPerPage {
+    width: 70px; /* Adjust as needed */
+  }
+  .download-icon {
+    float: right;
+    margin-left: 10px;
+  }
+  .download-icon:hover {
+    cursor: pointer;
+  }
 
- 
+  .mdi-close-box{
+    color:white !important;
+  }

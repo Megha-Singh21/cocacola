@@ -33,14 +33,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Include FusionCharts core library -->
-    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
 
-    <!-- Include FusionCharts theme -->
-    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
 
-    <!-- Bootstrap CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 
@@ -49,6 +44,15 @@
         max-width: 800px;
         margin: 0 auto;
         text-align: center;
+    }
+
+    /* Make footer sticky */
+    .card-footer {
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+        background-color: white;
+        /* Optional: to make footer background white */
     }
 
     #chart-container {
@@ -611,6 +615,123 @@
                     <!-- end page title -->
 
 
+                    <!-- Add Rotes -->
+                    <div class="container-fluid ">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 ">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card border-0">
+                                        <div
+                                            class="card-header bg-transparent d-flex justify-content-between align-items-center">
+                                            <h5 class="mb-0">Add Your Root Here</h5>
+                                            <div>
+                                                <button class="btn btn-primary me-2 routeAdd" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                    aria-expanded="true" aria-controls="collapseOne">
+                                                    + Add Single Route
+                                                </button>
+                                                <button class="btn btn-primary routeAdd" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="true" aria-controls="collapseTwo">
+                                                    + Add Bulk Route
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="mb-3 ">
+                                                        <label for="exampleInputType" class="form-label">Select Your Bid
+                                                            Type</label>
+                                                        <select class="form-select form-select-lg"
+                                                            id="exampleInputType">
+                                                            <option value="Primary">Primary</option>
+                                                            <option value="Secondary">Secondary</option>
+                                                            <option value="Secondary">Inbound</option>
+
+                                                        </select>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="exampleInputType" class="form-label">Enter Your
+                                                            Route</label>
+
+                                                        <div class="col">
+
+                                                            <input type="text" class="form-control"
+                                                                id="exampleInputFrom" aria-describedby="fromHelp"
+                                                                placeholder="From">
+                                                        </div>
+                                                        <div class="col">
+
+                                                            <input type="text" class="form-control" id="exampleInputTo"
+                                                                aria-describedby="toHelp" placeholder="To">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 form-check">
+                                                        <input type="checkbox" class="form-check-input"
+                                                            id="exampleCheck1">
+                                                        <label class="form-check-label" for="exampleCheck1">Check me
+                                                            out</label>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary"
+                                                        id="submitBtn">Submit</button>
+                                                    <button type="button" class="btn btn-secondary"
+                                                        id="cancelBtn">Cancel</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                    <label for="exampleSelect" class="form-label">Select Your Bid
+                                                        Type</label>
+                                                    <select class="form-select" id="exampleSelect">
+                                                        <option value="Option 1">Primary</option>
+                                                        <option value="Option 2">Secondary</option>
+                                                        <option value="Option 3">Inbound</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3" style="max-height: 300px; overflow-y: auto;">
+                                                    <label for="exampleInputFile" class="form-label">Uplode File
+                                                    </label>
+                                                    <input class="form-control" type="file" id="exampleInputFile">
+                                                </div>
+                                                <div class="card mt-3" style="max-height: 500px; overflow-y: auto;">
+                                                    <div class="card-header">
+                                                        Review Data
+                                                    </div>
+                                                    <div class="card-body" id="reviewData">
+                                                        No file uploaded
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Review data checked
+                                                            </label>
+                                                        </div>
+                                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+                                                            <button type="button" class="btn btn-primary me-md-2"
+                                                                id="reviewSubmitBtn">Submit</button>
+                                                            <button type="button" class="btn btn-secondary"
+                                                                id="reviewCancelBtn">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End of Add Routes -->
+
+
                     <!-- ================================= Chart ====================================== -->
                     <div class="container-fluid">
                         <div class="row justify-content-center">
@@ -618,114 +739,13 @@
                                 <!-- <a class="nav-link active mb-4" data-bs-toggle="tab" href="#primary" role="tab">
                                     <button class="btn btn-danger"><span class="d-none d-sm-block" id="addRowBtn">+ Add Routes</span></button>
                                 </a> -->
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="row">
 
-                                            <!-- Add New Routes -->
-                                            <div class="col-md-6 ">
-                                                <!-- Select Option -->
-                                                <div class="mb-3" id="selectOptionSection" style="display: none;">
-                                                    <select class="form-select" id="selectOption">
-                                                        <option selected disabled>Please Select The Bid Type</option>
-                                                        <option value="primary">Primary</option>
-                                                        <option value="secondary">Secondary</option>
-                                                        <option value="inbound">Inbound</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-    
-                                            <div class="col-md-6" style="margin-top: -20px;">
-                                                <!-- File Upload Section -->
-                                                <div class="file-upload" id="fileUploadSection">
-                                                    <!-- <h3 class="text-center mb-3 text-right">Upload Data File</h3> -->
-                                                    <div class="input-group">
-                                                        <input type="file" class="form-control custom-file-input"
-                                                            id="fileInput" aria-describedby="fileInputAddon" disabled>
-                                                        <button class="btn btn-primary" type="button" id="fileInputAddon"
-                                                            disabled>Upload Routes</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-                                        <!-- Review Data Card -->
-                                        <div class="review-data-card" id="reviewDataCard">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    Review Uploaded Data
-                                                </div>
-                                                <div class="card-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped">
-                                                            <thead>
-                                                                <tr id="reviewTableHeader">
-                                                                    <!-- CSV header will be inserted here -->
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody id="reviewTableBody">
-                                                                <!-- CSV data will be inserted here -->
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <div class="form-check mb-3">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="dataCorrectCheckbox">
-                                                        <label class="form-check-label" for="dataCorrectCheckbox">
-                                                            Above all data is correct
-                                                        </label>
-                                                    </div>
-                                                    <div class="text-end">
-                                                        <button type="button" class="btn btn-success me-2"
-                                                            id="submitButton">Submit</button>
-                                                        <button type="button" class="btn btn-danger"
-                                                            id="cancelButton">Cancel</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- End -->
-
-                                </div>
-
-                                <div class="card mt-5">
+                                <div class="card ">
                                     <div class="card-header align-items-center d-flex">
                                         <h4 class="card-title mb-0 flex-grow-1">Routes table</h4>
-                                        <div class="flex-shrink-0">
-                                            <ul class="nav justify-content-end nav-pills card-header-pills"
-                                                role="tablist">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" data-bs-toggle="tab" href="#primary"
-                                                        role="tab">
-                                                        <!-- <span class="d-block d-sm-none">+ Add routes</span> -->
-                                                        <span class="d-none d-sm-block" id="addRowBtn">+ Add
-                                                            routes</span>
-                                                    </a>
-                                                </li>
-                                                <!-- <li class="nav-item">
-                                                    <a class="nav-link" data-bs-toggle="tab" href="#secondary" role="tab">
-                                                        <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                                        <span class="d-none d-sm-block">Secondary</span> 
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" data-bs-toggle="tab" href="#inbound" role="tab">
-                                                        <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                                        <span class="d-none d-sm-block"> Inbound</span>   
-                                                    </a>
-                                                </li> -->
-                                            </ul>
-                                        </div>
                                     </div><!-- end card header -->
 
                                     <div class="card-body">
-
                                         <!-- Tab panes -->
                                         <div class="tab-content text-muted">
 
@@ -772,12 +792,15 @@
                                                                     <td class="editable-cell">Primary</td>
 
                                                                     <td>
+                                                                        <button class="btn btn-primary btn-edit"><i
+                                                                                class="fas fas fa-edit"></i></button>
                                                                         <button
-                                                                            class="btn btn-primary btn-edit">Edit</button>
-                                                                        <button
-                                                                            class="btn btn-success btn-save d-none">Save</button>
-                                                                        <button
-                                                                            class="btn btn-info btn-history">History</button>
+                                                                            class="btn btn-success btn-save d-none"><i
+                                                                                class="fas fa-save"></i></button>
+                                                                        <button class="btn btn-info btn-history"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModal"><i
+                                                                                class="fas fa-history"></i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -798,12 +821,15 @@
                                                                     <td class="editable-cell">Primary</td>
 
                                                                     <td>
+                                                                        <button class="btn btn-primary btn-edit"><i
+                                                                                class="fas fas fa-edit"></i></button>
                                                                         <button
-                                                                            class="btn btn-primary btn-edit">Edit</button>
-                                                                        <button
-                                                                            class="btn btn-success btn-save d-none">Save</button>
-                                                                        <button
-                                                                            class="btn btn-info btn-history">History</button>
+                                                                            class="btn btn-success btn-save d-none"><i
+                                                                                class="fas fa-save"></i></button>
+                                                                        <button class="btn btn-info btn-history"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModal"><i
+                                                                                class="fas fa-history"></i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -824,12 +850,15 @@
                                                                     <td class="editable-cell">Primary</td>
 
                                                                     <td>
+                                                                        <button class="btn btn-primary btn-edit"><i
+                                                                                class="fas fas fa-edit"></i></button>
                                                                         <button
-                                                                            class="btn btn-primary btn-edit">Edit</button>
-                                                                        <button
-                                                                            class="btn btn-success btn-save d-none">Save</button>
-                                                                        <button
-                                                                            class="btn btn-info btn-history">History</button>
+                                                                            class="btn btn-success btn-save d-none"><i
+                                                                                class="fas fa-save"></i></button>
+                                                                        <button class="btn btn-info btn-history"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModal"><i
+                                                                                class="fas fa-history"></i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -850,12 +879,15 @@
                                                                     <td class="editable-cell">Primary</td>
 
                                                                     <td>
+                                                                        <button class="btn btn-primary btn-edit"><i
+                                                                                class="fas fas fa-edit"></i></button>
                                                                         <button
-                                                                            class="btn btn-primary btn-edit">Edit</button>
-                                                                        <button
-                                                                            class="btn btn-success btn-save d-none">Save</button>
-                                                                        <button
-                                                                            class="btn btn-info btn-history">History</button>
+                                                                            class="btn btn-success btn-save d-none"><i
+                                                                                class="fas fa-save"></i></button>
+                                                                        <button class="btn btn-info btn-history"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModal"><i
+                                                                                class="fas fa-history"></i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -876,12 +908,15 @@
                                                                     <td class="editable-cell">Primary</td>
 
                                                                     <td>
+                                                                        <button class="btn btn-primary btn-edit"><i
+                                                                                class="fas fas fa-edit"></i></button>
                                                                         <button
-                                                                            class="btn btn-primary btn-edit">Edit</button>
-                                                                        <button
-                                                                            class="btn btn-success btn-save d-none">Save</button>
-                                                                        <button
-                                                                            class="btn btn-info btn-history">History</button>
+                                                                            class="btn btn-success btn-save d-none"><i
+                                                                                class="fas fa-save"></i></button>
+                                                                        <button class="btn btn-info btn-history"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModal"><i
+                                                                                class="fas fa-history"></i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -902,12 +937,15 @@
                                                                     <td class="editable-cell">Primary</td>
 
                                                                     <td>
+                                                                        <button class="btn btn-primary btn-edit"><i
+                                                                                class="fas fas fa-edit"></i></button>
                                                                         <button
-                                                                            class="btn btn-primary btn-edit">Edit</button>
-                                                                        <button
-                                                                            class="btn btn-success btn-save d-none">Save</button>
-                                                                        <button
-                                                                            class="btn btn-info btn-history">History</button>
+                                                                            class="btn btn-success btn-save d-none"><i
+                                                                                class="fas fa-save"></i></button>
+                                                                        <button class="btn btn-info btn-history"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModal"><i
+                                                                                class="fas fa-history"></i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -928,12 +966,15 @@
                                                                     <td class="editable-cell">Primary</td>
 
                                                                     <td>
+                                                                        <button class="btn btn-primary btn-edit"><i
+                                                                                class="fas fas fa-edit"></i></button>
                                                                         <button
-                                                                            class="btn btn-primary btn-edit">Edit</button>
-                                                                        <button
-                                                                            class="btn btn-success btn-save d-none">Save</button>
-                                                                        <button
-                                                                            class="btn btn-info btn-history">History</button>
+                                                                            class="btn btn-success btn-save d-none"><i
+                                                                                class="fas fa-save"></i></button>
+                                                                        <button class="btn btn-info btn-history"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModal"><i
+                                                                                class="fas fa-history"></i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -954,12 +995,15 @@
                                                                     <td class="editable-cell">Primary</td>
 
                                                                     <td>
+                                                                        <button class="btn btn-primary btn-edit"><i
+                                                                                class="fas fas fa-edit"></i></button>
                                                                         <button
-                                                                            class="btn btn-primary btn-edit">Edit</button>
-                                                                        <button
-                                                                            class="btn btn-success btn-save d-none">Save</button>
-                                                                        <button
-                                                                            class="btn btn-info btn-history">History</button>
+                                                                            class="btn btn-success btn-save d-none"><i
+                                                                                class="fas fa-save"></i></button>
+                                                                        <button class="btn btn-info btn-history"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModal"><i
+                                                                                class="fas fa-history"></i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -980,12 +1024,15 @@
                                                                     <td class="editable-cell">Primary</td>
 
                                                                     <td>
+                                                                        <button class="btn btn-primary btn-edit"><i
+                                                                                class="fas fas fa-edit"></i></button>
                                                                         <button
-                                                                            class="btn btn-primary btn-edit">Edit</button>
-                                                                        <button
-                                                                            class="btn btn-success btn-save d-none">Save</button>
-                                                                        <button
-                                                                            class="btn btn-info btn-history">History</button>
+                                                                            class="btn btn-success btn-save d-none"><i
+                                                                                class="fas fa-save"></i></button>
+                                                                        <button class="btn btn-info btn-history"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModal"><i
+                                                                                class="fas fa-history"></i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -1006,24 +1053,125 @@
                                                                     <td class="editable-cell">Primary</td>
 
                                                                     <td>
+                                                                        <button class="btn btn-primary btn-edit"><i
+                                                                                class="fas fas fa-edit"></i></button>
                                                                         <button
-                                                                            class="btn btn-primary btn-edit">Edit</button>
-                                                                        <button
-                                                                            class="btn btn-success btn-save d-none">Save</button>
-                                                                        <button
-                                                                            class="btn btn-info btn-history">History</button>
+                                                                            class="btn btn-success btn-save d-none"><i
+                                                                                class="fas fa-save"></i></button>
+                                                                        <button class="btn btn-info btn-history"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModal"><i
+                                                                                class="fas fa-history"></i></button>
                                                                     </td>
                                                                 </tr>
 
                                                             </tbody>
                                                         </table>
+                                                        <!-- Pagination -->
+                                                        <div class="container-fluide mt-5">
+                                                            <div class="row align-items-center">
+                                                                <div
+                                                                    class="col-md-6 col-12 text-md-start text-center mb-md-0 mb-3">
+                                                                    <p class="mb-0">Showing 1 to 7 of 7</p>
+                                                                </div>
+                                                                <div class="col-md-6 col-12 text-md-end text-center">
+                                                                    <div
+                                                                        class="d-flex justify-content-end align-items-center">
+                                                                        <label for="recordsPerPage"
+                                                                            class="form-label me-2 mb-0">Per
+                                                                            Page:</label>
+                                                                        <select id="recordsPerPage" class="form-select">
+                                                                            <option value="10" selected>10</option>
+                                                                            <option value="20">20</option>
+                                                                            <option value="50">50</option>
+                                                                        </select>
+                                                                        <ul id="pagination"
+                                                                            class="pagination mb-0 ms-2">
+                                                                            <li class="page-item" id="previous"><a
+                                                                                    class="page-link"
+                                                                                    href="#">Previous</a></li>
+                                                                            <!-- Page numbers will be dynamically added here -->
+                                                                            <li class="page-item" id="next"><a
+                                                                                    class="page-link" href="#">Next</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!--End of Pagination  -->
                                                     </div>
 
                                                 </div>
+
                                             </div>
                                             <!-- End of Primary Table -->
 
+                                            <!-- History Modal -->
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header eventLog">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Event Log
+                                                            </h5>
+                                                            <button type="button" class="btn"
+                                                                data-bs-dismiss="modal" aria-label="Close"> <i class="mdi mdi-close-box"></i></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="col-md-3">Date</th>
+                                                                            <th>Remark</th>
+                                                                            <th class="col-md-3">By</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>2024-04-09</td>
+                                                                            <td>
+                                                                                <span class="badge bg-primary">Remark
+                                                                                    1</span>
+                                                                                <span class="badge bg-secondary">Remark
+                                                                                    2</span>
+                                                                                <span class="badge bg-success">Remark
+                                                                                    3</span>
+                                                                                <span class="badge bg-success">Remark
+                                                                                    3</span>
 
+
+                                                                            </td>
+                                                                            <td>John Doe</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>2024-04-08</td>
+                                                                            <td>
+                                                                                <span
+                                                                                    class="badge bg-info text-dark">Remark
+                                                                                    4</span>
+                                                                                <span
+                                                                                    class="badge bg-warning text-dark">Remark
+                                                                                    5</span>
+                                                                            </td>
+                                                                            <td>Mark</td>
+                                                                        </tr>
+                                                                        <!-- Add more rows as needed -->
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary close"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End of History Modal -->
 
                                             <!-- Table edit Script -->
                                             <script>
@@ -1061,6 +1209,9 @@
                                         </div>
                                     </div><!-- end card-body -->
                                 </div><!-- end card -->
+
+
+
                             </div><!-- end col -->
 
                         </div>
@@ -1068,10 +1219,7 @@
 
                     </div>
                 </div>
-                <!-- ================================End of Chart ======================================= -->
-
-
-
+                <!-- ================================End ======================================= -->
             </div>
         </div>
         <!-- container-fluid -->
@@ -1262,89 +1410,162 @@
 
     <script src="../assets/js/app.js"></script>
 
+    <!-- Include FusionCharts core library -->
+    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+
+    <!-- Include FusionCharts theme -->
+    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-FIEXwsGi8vUmb+hKSX6zPz4E9e/oZZbo+3Bo/C7QCFoO+qtKHt3f/N6Jd68xej5b" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-r6sVEx4FRp1VA+LK9eqoCI9GQ1eD/gfKckbTEtTLwGaXvHp6w+lkORAZu+R2vMlO"
+        crossorigin="anonymous"></script>
+
     <!-- Add New route Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        $(document).ready(function () {
-            // Add Row Button Click Event
-            $('#addRowBtn').click(function () {
-                $('#selectOptionSection').slideDown();
-            });
-
-            // Select Option Change Event
-            $('#selectOption').change(function () {
-                var selectedOption = $(this).val();
-                var $fileUploadSection = $('#fileUploadSection');
-                var $fileInput = $('#fileInput');
-                var $uploadButton = $('#fileInputAddon');
-
-                // Enable or disable file upload based on the selected option
-                if (selectedOption === 'primary' || selectedOption === 'secondary' || selectedOption === 'inbound') {
-                    $fileUploadSection.slideDown();
-                    $fileInput.prop('disabled', false);
-                    $uploadButton.prop('disabled', false);
-                } else {
-                    $fileUploadSection.slideUp();
-                    $fileInput.prop('disabled', true);
-                    $uploadButton.prop('disabled', true);
-                }
-            });
-
-            // File Upload Button Click Event
-            $('#fileInputAddon').click(function () {
-                // Mocking file upload success
-                var fileUploaded = true;
-
-                if (fileUploaded) {
-                    $('#reviewDataCard').slideDown();
-
-                    // Read uploaded file and display its content
-                    var file = $('#fileInput')[0].files[0];
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        var csvData = e.target.result;
-                        var rows = csvData.split('\n');
-                        var headers = rows[0].split(',');
-
-                        // Create table header
-                        var headerHtml = '';
-                        headers.forEach(function (header) {
-                            headerHtml += '<th>' + header + '</th>';
-                        });
-                        $('#reviewTableHeader').html(headerHtml);
-
-                        // Create table body
-                        var bodyHtml = '';
-                        for (var i = 1; i < rows.length; i++) {
-                            var cells = rows[i].split(',');
-                            bodyHtml += '<tr>';
-                            cells.forEach(function (cell) {
-                                bodyHtml += '<td>' + cell + '</td>';
-                            });
-                            bodyHtml += '</tr>';
-                        }
-                        $('#reviewTableBody').html(bodyHtml);
-                    };
-
-                    reader.readAsText(file);
-                }
-            });
-
-            // Cancel Button Click Event
-            $('#cancelButton').click(function () {
-                $('#reviewDataCard').slideUp();
-            });
-
-            // Submit Button Click Event
-            $('#submitButton').click(function () {
-                // Hide select option, file upload, and review data card
-                $('#selectOptionSection').slideUp();
-                $('#fileUploadSection').slideUp();
-                $('#reviewDataCard').slideUp();
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            // Close all accordions
+            var accordions = document.querySelectorAll('.accordion .collapse');
+            accordions.forEach(function (accordion) {
+                accordion.classList.remove('show');
             });
         });
+
+        document.getElementById('cancelBtn').addEventListener('click', function () {
+            // Close all accordions
+            var accordions = document.querySelectorAll('.accordion .collapse');
+            accordions.forEach(function (accordion) {
+                accordion.classList.remove('show');
+            });
+        });
+
+        document.getElementById('reviewSubmitBtn').addEventListener('click', function () {
+            // Close all accordions
+            var accordions = document.querySelectorAll('.accordion .collapse');
+            accordions.forEach(function (accordion) {
+                accordion.classList.remove('show');
+            });
+        });
+
+        document.getElementById('reviewCancelBtn').addEventListener('click', function () {
+            // Close all accordions
+            var accordions = document.querySelectorAll('.accordion .collapse');
+            accordions.forEach(function (accordion) {
+                accordion.classList.remove('show');
+            });
+        });
+
+        document.getElementById('exampleInputFile').addEventListener('change', function (event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    // Parse CSV data
+                    var csv = e.target.result;
+                    var rows = csv.split("\n");
+                    var table = '<table class="table table-bordered table-striped">';
+                    for (var i = 0; i < rows.length; i++) {
+                        var cells = rows[i].split(",");
+                        table += '<tr>';
+                        for (var j = 0; j < cells.length; j++) {
+                            table += '<td>' + cells[j] + '</td>';
+                        }
+                        table += '</tr>';
+                    }
+                    table += '</table>';
+                    document.getElementById('reviewData').innerHTML = table;
+                };
+                reader.readAsText(file);
+            } else {
+                document.getElementById('reviewData').innerText = 'No file uploaded';
+            }
+        });
     </script>
-    <!-- End of Script -->
+    <!-- end -->
+
+    <!-- Pagenation  -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const pagination = document.getElementById("pagination");
+            const previousButton = document.getElementById("previous");
+            const nextButton = document.getElementById("next");
+            const totalPages = 5; // Total number of pages
+            let currentPage = 1;
+
+            // Initial page load
+            updatePagination();
+
+            // Event listeners for previous and next buttons
+            previousButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                if (currentPage > 1) {
+                    currentPage--;
+                    updatePagination();
+                }
+            });
+
+            nextButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updatePagination();
+                }
+            });
+
+            // Function to update pagination
+            function updatePagination() {
+                // Clear previous page numbers
+                pagination.innerHTML = "";
+
+                // Add previous button
+                if (currentPage > 1) {
+                    pagination.appendChild(createPageLink(currentPage - 1, "Previous"));
+                } else {
+                    previousButton.classList.add("disabled");
+                }
+
+                // Add page numbers
+                for (let i = 1; i <= totalPages; i++) {
+                    pagination.appendChild(createPageLink(i));
+                }
+
+                // Add next button
+                if (currentPage < totalPages) {
+                    pagination.appendChild(createPageLink(currentPage + 1, "Next"));
+                } else {
+                    nextButton.classList.add("disabled");
+                }
+            }
+
+            // Function to create page link element
+            function createPageLink(pageNumber, label = pageNumber) {
+                const li = document.createElement("li");
+                li.classList.add("page-item");
+                const link = document.createElement("a");
+                link.classList.add("page-link");
+                link.href = "#";
+                link.textContent = label;
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    currentPage = pageNumber;
+                    updatePagination();
+                });
+                li.appendChild(link);
+                if (currentPage === pageNumber) {
+                    li.classList.add("active");
+                }
+                return li;
+            }
+        });
+    </script>
+    <!-- End of pagenation -->
 
 </body>
 
