@@ -810,7 +810,7 @@
                                                                             <i class="fas fa-info-circle"
                                                                                 style="color: red;"
                                                                                 data-bs-toggle="modal"
-                                                                                data-bs-target="#submitedDocument"></i>
+                                                                                data-bs-target="#submitedDocumentPartnership"></i>
                                                                         </div>
 
                                                                     </div>
@@ -860,7 +860,7 @@
                                                                             <i class="fas fa-info-circle"
                                                                                 style="color: red;"
                                                                                 data-bs-toggle="modal"
-                                                                                data-bs-target="#submitedDocument"></i>
+                                                                                data-bs-target="#submitedDocumentSoleProprietor"></i>
                                                                         </div>
 
                                                                     </div>
@@ -910,7 +910,7 @@
                                                                             <i class="fas fa-info-circle"
                                                                                 style="color: red;"
                                                                                 data-bs-toggle="modal"
-                                                                                data-bs-target="#submitedDocument"></i>
+                                                                                data-bs-target="#submitedDocumentSoleProprietor"></i>
                                                                         </div>
 
                                                                     </div>
@@ -960,7 +960,7 @@
                                                                             <i class="fas fa-info-circle"
                                                                                 style="color: red;"
                                                                                 data-bs-toggle="modal"
-                                                                                data-bs-target="#submitedDocument"></i>
+                                                                                data-bs-target="#submitedDocumentSoleProprietor"></i>
                                                                         </div>
 
                                                                     </div>
@@ -1010,7 +1010,7 @@
                                                                             <i class="fas fa-info-circle"
                                                                                 style="color: red;"
                                                                                 data-bs-toggle="modal"
-                                                                                data-bs-target="#submitedDocument"></i>
+                                                                                data-bs-target="#submitedDocumentPartnership"></i>
                                                                         </div>
 
                                                                     </div>
@@ -1202,7 +1202,7 @@
                                                                                 class="fas fa-info-circle"
                                                                                 style="color: red;"
                                                                                 data-bs-toggle="modal"
-                                                                                data-bs-target="#submitedDocument"></i></span>
+                                                                                data-bs-target="#submitedDocumentSoleProprietor"></i></span>
 
                                                                     </div>
                                                                 </td>
@@ -1250,7 +1250,7 @@
                                                                         <span>Partnership <i class="fas fa-info-circle"
                                                                                 style="color: red;"
                                                                                 data-bs-toggle="modal"
-                                                                                data-bs-target="#submitedDocument"></i></span>
+                                                                                data-bs-target="#submitedDocumentPartnership"></i></span>
 
                                                                     </div>
                                                                 </td>
@@ -1436,8 +1436,8 @@
                                                                         <span>Partnership <i class="fas fa-info-circle"
                                                                                 style="color: red;"
                                                                                 data-bs-toggle="modal"
-                                                                                data-bs-target="#submitedDocument"></i></span>
-
+                                                                                data-bs-target="#submitedDocumentPartnership"></i>
+                                                                        </span>
                                                                     </div>
                                                                 </td>
                                                                 <td>South</td>
@@ -1639,7 +1639,7 @@
                 </div>
                 <!-- ================================End of Chart ======================================= -->
 
-                <!-- modal -->
+                <!-- Modal For Private Ltd. -->
                 <div class="modal fade" id="submitedDocument" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg">
@@ -1652,33 +1652,71 @@
                             </div>
                             <div class="modal-body">
                                 <div class="table-responsive">
-                                    <table class="table">
-
+                                    <table class="table table-bordered">
+                                        <!-- <thead>
+                                            <tr class="text-center">
+                                                <th scope="col">Document Name</th>
+                                                <th scope="col">Download</th>
+                                            </tr>
+                                        </thead> -->
                                         <tbody>
-                                            <ul class="list-unstyled">
-                                                <li class="mb-2">Memorandum of Association (MoA) and Articles of
-                                                    Association (AoA) <i class="fas fa-download download-icon"></i></li>
-                                                <li class="mb-2">Certificate of Incorporation <i
-                                                        class="fas fa-download download-icon"></i></li>
-                                                <li class="mb-2">Director Identification Number (DIN) for directors <i
-                                                        class="fas fa-download download-icon"></i></li>
-                                                <li class="mb-2">Digital Signature Certificates (DSC) for authorized
-                                                    signatories <i class="fas fa-download download-icon"></i></li>
-                                                <li class="mb-2">PAN card <i class="fas fa-download download-icon"></i>
-                                                </li>
-                                                <li class="mb-2">TAN (Tax Deduction and Collection Account Number) for
-                                                    tax purposes <i class="fas fa-download download-icon"></i></li>
-                                                <li class="mb-2">Address proof for the registered office <i
-                                                        class="fas fa-download download-icon"></i></li>
-                                                <li class="mb-2">Share certificates <i
-                                                        class="fas fa-download download-icon"></i></li>
-                                                <li class="mb-2">Bank account documents <i
-                                                        class="fas fa-download download-icon"></i></li>
-                                                <li class="mb-2">Board resolution and minutes of meetings <i
-                                                        class="fas fa-download download-icon"></i></li>
-                                                <li class="mb-2">Financial statements and audit reports <i
-                                                        class="fas fa-download download-icon"></i></li>
-                                            </ul>
+                                            <tr>
+                                                <td>Memorandum of Association (MoA) and Articles of Association (AoA)
+                                                </td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Certificate of Incorporation</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Director Identification Number (DIN) for directors</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Digital Signature Certificates (DSC) for authorized signatories</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>PAN card </td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>TAN (Tax Deduction and Collection Account Number) for tax purposes
+                                                </td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Address proof for the registered office</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Share certificates</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bank account documents</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Board resolution and minutes of meetings</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Financial statements and audit reports</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -1690,7 +1728,151 @@
                         </div>
                     </div>
                 </div>
-                <!-- end of Modal -->
+                <!-- End of Modal -->
+
+                <!-- Modal For Partnership -->
+                <div class="modal fade" id="submitedDocumentPartnership" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header submitDocumnetHeader">
+                                <h5 class="modal-title" id="exampleModalLabel">Submited Document List
+                                </h5>
+                                <button type="button" class="btn btnCloseModal" data-bs-dismiss="modal"
+                                    aria-label="Close"><i class="mdi mdi-close-box"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <!-- <thead>
+                                            <tr class="text-center">
+                                                <th scope="col">Document Name</th>
+                                                <th scope="col">Download</th>
+                                            </tr>
+                                        </thead> -->
+                                        <tbody>
+                                            <tr>
+                                                <td>PAN Card of each partner
+                                                </td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Application form No. 1</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Partnership deed copy signed by all the partners</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>PAN of the firm</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Address proof all the partners</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Address proof of the organization
+                                                </td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>An affidavit of acknowledgement with all the details and attested by the notary.</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Photographs of all the partners</td>
+                                                <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                                </td>
+                                            </tr>
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary close"
+                                    data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Modal -->
+
+                 <!-- Modal For Sole Proprietor -->
+                 <div class="modal fade" id="submitedDocumentSoleProprietor" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                 <div class="modal-dialog modal-lg">
+                     <div class="modal-content">
+                         <div class="modal-header submitDocumnetHeader">
+                             <h5 class="modal-title" id="exampleModalLabel">Submited Document List
+                             </h5>
+                             <button type="button" class="btn btnCloseModal" data-bs-dismiss="modal"
+                                 aria-label="Close"><i class="mdi mdi-close-box"></i></button>
+                         </div>
+                         <div class="modal-body">
+                             <div class="table-responsive">
+                                 <table class="table table-bordered">
+                                     <!-- <thead>
+                                         <tr class="text-center">
+                                             <th scope="col">Document Name</th>
+                                             <th scope="col">Download</th>
+                                         </tr>
+                                     </thead> -->
+                                     <tbody>
+                                         <tr>
+                                             <td>Personal Identification (such as Passport, Driver's License, or National ID)
+                                             </td>
+                                             <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td>Tax Identification Number (TIN) or Personal PAN Card (for tax purposes)</td>
+                                             <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td>GST Registration Certificate (if applicable)</td>
+                                             <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td>Lease Agreement or Rental Agreement for Business Premises (if applicable)</td>
+                                             <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td>Property Ownership Documents (if operating from owned property)</td>
+                                             <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td>Udyam Certificate
+                                             </td>
+                                             <td class="text-center"><i class="fas fa-download download-icon"></i>
+                                             </td>
+                                         </tr>
+                                        
+                                     </tbody>
+                                 </table>
+                             </div>
+                         </div>
+                         <div class="modal-footer">
+                             <button type="button" class="btn btn-secondary close"
+                                 data-bs-dismiss="modal">Close</button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- End of Modal -->
 
             </div>
         </div>

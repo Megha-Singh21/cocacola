@@ -68,6 +68,39 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .progress-bar {
+        position: relative;
+        overflow: visible;
+        background-color: #FEC9C8;
+    }
+
+    .progress-bar .progress-month {
+        font-size: 0.8rem;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .progress-bar .progress-percent {
+        font-size: 0.8rem;
+        position: absolute;
+        top: 50%;
+        right: 0.5rem;
+        transform: translateY(-50%);
+    }
+
+    .progress-month {
+        margin-left: 15px;
+    }
+
+    canvas {
+        max-width: 600px;
+        /* Adjust the maximum width as needed */
+        width: 100%;
+        height: auto;
+    }
 </style>
 
 <body>
@@ -578,7 +611,7 @@
                 <div class="container-fluid">
 
                     <!-- start page title -->
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                                 <h4 class="mb-sm-0 font-size-18">Dashboard</h4>
@@ -592,14 +625,14 @@
 
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- end page title -->
 
 
                     <!-- ================================= Chart ====================================== -->
                     <div class="container-fluid">
                         <div class="row justify-content-center">
-                            <div class="col-md-6">
+                            <!-- <div class="col-md-6">
                                 <div class="card widget-card border-light shadow-sm">
                                     <div class="card-body p-4">
                                         <div class="d-flex justify-content-between align-items-center">
@@ -778,356 +811,514 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+
+                            <div class="col-md-12">
+
+                                <div class="card">
+                                    <div class="card-header align-items-center d-flex">
+                                        <h4 class="card-title mb-0 flex-grow-1">Overall Vendor Performance</h4>
+                                        <div class="flex-shrink-0">
+                                            <ul class="nav justify-content-end nav-pills card-header-pills"
+                                                role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-bs-toggle="tab" href="#primary"
+                                                        role="tab">
+                                                        <span class="d-block d-sm-none"><i
+                                                                class="fas fa-home"></i></span>
+                                                        <span class="d-none d-sm-block">View More</span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#secondary"
+                                                        role="tab">
+                                                        <span class="d-block d-sm-none"><i
+                                                                class="far fa-user"></i></span>
+                                                        <span class="d-none d-sm-block">Secondary</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#inbound" role="tab">
+                                                        <span class="d-block d-sm-none"><i
+                                                                class="far fa-envelope"></i></span>
+                                                        <span class="d-none d-sm-block"> Inbound</span>
+                                                    </a>
+                                                </li> -->
+                                            </ul>
+                                        </div>
+                                   
+                                    </div><!-- end card header -->
+                                    <div class="card-body">
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content text-muted">
+
+                                            <!-- Primary Table -->
+                                            <div class="tab-pane active" id="primary" role="tabpanel">
+                                                <div class="table-rep-plugin">
+                                                    <div class="table-responsive mb-0 text-nowrap"
+                                                        data-pattern="priority-columns">
+                                                        <table id="example"
+                                                            class="table table-bordered table-condensed table-responsive">
+                                                            <thead class="bgColor">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th class="text-center font-size-20" colspan="5">LSP
+                                                                        Quote</th>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Name</th>
+                                                                    <th>Ownership Type </th>
+                                                                    <th>Cluster</th>
+                                                                    <th>One Way Two Way</th>
+                                                                    <th>Sending</th>
+                                                                    <th>Receiving Town</th>
+                                                                    <th>Annual Volume 2024 (18MT Equivalent) - Trucks
+                                                                    </th>
+                                                                    <th>SLA per day</th>
+                                                                    <th>MAC Rate 18MT 32ft</th>
+                                                                    <th>MAC(Multi Axle Carrier) Supply Per day (SLA)
+                                                                    </th>
+                                                                    <th>Trailer Rate 24MT 40ft flat bed</th>
+                                                                    <th>TLR Supply Per day (SLA)</th>
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Ram Charan</td>
+                                                                    <td>Private Ltd.</td>
+                                                                    <td>South</td>
+                                                                    <td>One Way</td>
+                                                                    <td>Bangalore</td>
+                                                                    <td>Chennai</td>
+                                                                    <td>1500</td>
+                                                                    <td>8</td>
+                                                                    <td>22000</td>
+                                                                    <td>5</td>
+                                                                    <td>26000</td>
+                                                                    <td>4</td>
+
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>Ram Charan</td>
+                                                                    <td>Private Ltd.</td>
+                                                                    <td>South</td>
+                                                                    <td>One Way</td>
+                                                                    <td>Bangalore</td>
+                                                                    <td>Chennai</td>
+                                                                    <td>1500</td>
+                                                                    <td>8</td>
+                                                                    <td>22000</td>
+                                                                    <td>5</td>
+                                                                    <td>26000</td>
+                                                                    <td>4</td>
+
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>Ram Charan</td>
+                                                                    <td>Private Ltd.</td>
+                                                                    <td>South</td>
+                                                                    <td>One Way</td>
+                                                                    <td>Bangalore</td>
+                                                                    <td>Chennai</td>
+                                                                    <td>1500</td>
+                                                                    <td>8</td>
+                                                                    <td>22000</td>
+                                                                    <td>5</td>
+                                                                    <td>26000</td>
+                                                                    <td>4</td>
+
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>Ram Charan</td>
+                                                                    <td>Private Ltd.</td>
+                                                                    <td>South</td>
+                                                                    <td>One Way</td>
+                                                                    <td>Bangalore</td>
+                                                                    <td>Chennai</td>
+                                                                    <td>1500</td>
+                                                                    <td>8</td>
+                                                                    <td>22000</td>
+                                                                    <td>5</td>
+                                                                    <td>26000</td>
+                                                                    <td>4</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Ram Charan</td>
+                                                                    <td>Private Ltd.</td>
+                                                                    <td>South</td>
+                                                                    <td>One Way</td>
+                                                                    <td>Bangalore</td>
+                                                                    <td>Chennai</td>
+                                                                    <td>1500</td>
+                                                                    <td>8</td>
+                                                                    <td>22000</td>
+                                                                    <td>5</td>
+                                                                    <td>26000</td>
+                                                                    <td>4</td>
+
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>Ram Charan</td>
+                                                                    <td> Private Ltd.</td>
+                                                                    <td>South</td>
+                                                                    <td>One Way</td>
+                                                                    <td>Bangalore</td>
+                                                                    <td>Chennai</td>
+                                                                    <td>1500</td>
+                                                                    <td>8</td>
+                                                                    <td>22000</td>
+                                                                    <td>5</td>
+                                                                    <td>26000</td>
+                                                                    <td>4</td>
+
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>Ram Charan</td>
+                                                                    <td>Private Ltd.</td>
+                                                                    <td>South</td>
+                                                                    <td>One Way</td>
+                                                                    <td>Bangalore</td>
+                                                                    <td>Chennai</td>
+                                                                    <td>1500</td>
+                                                                    <td>8</td>
+                                                                    <td>22000</td>
+                                                                    <td>5</td>
+                                                                    <td>26000</td>
+                                                                    <td>4</td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End of Primary Table -->
+
+                                        </div>
+                                        <!-- <button class="btn btn-primary">View More</button> -->
+
+                                    </div><!-- end card-body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
                         </div>
                     </div>
                     <!-- ================================End of Chart ======================================= -->
 
-                    <!-- 2nd Row -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card mb-4">
-                                <div
-                                    class="card-header mt-2 border-0 bg-transparent d-flex justify-content-between align-items-center">
-                                    <h5 class="card-title mb-0">Carrier On Time(%)</h5>
-                                    <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
-                                </div>
-                                <hr>
-                                <div class="card-body">
-                                    <div id="progressBars">
-                                        <!-- Progress bar 1 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">A Dule Pyle</div>
+                    <!-- Performance as SLA -->
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <!-- <div class="col-md-6">
+                                <div class="card widget-card border-light shadow-sm">
+                                    <div class="card-body p-4">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5 class="card-title widget-card-title mb-1">Shipment Stats Details</h5>
+                                            <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
+                                        </div>
+                                        <p class="fs-7 text-secondary mb-4">Last 30 Days</p>
+                                        <div id="bsb-chart-7-small-1" class="mb-4"></div>
+                                        <div class="row gy-4">
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-primary-subtle text-primary rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-display"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">Delivery Status</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-primary-subtle text-primary rounded-2 py-1 px-2">60%</span>
+                                                        </h6>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-                                                        aria-valuemax="100">70%</div>
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-success-subtle text-success rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-tablet"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">Piked Up</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-success-subtle text-success rounded-2 py-1 px-2">25%</span>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-danger-subtle text-danger rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-phone"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">Delivered</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-danger-subtle text-danger rounded-2 py-1 px-2">15%</span>
+                                                        </h6>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Progress bar 2 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">Coyote Logistics</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">40%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 3 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">Estes Express</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 80%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">80%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 4 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">New England Motor Freight</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 30%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">30%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 5 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">R+L Carriers</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 49%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">49%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 6 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">Southeastern Freight Lines</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">40%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 7 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">UPS Freight</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 35%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">35%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 8 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">UPS Parcel</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 67%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">67%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 9 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">Westgate Global Logistics</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 29%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">29%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 10 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">XPO Logistics</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 90%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">90%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 11 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">YRC Freight</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 68%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">68%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Add more progress bars here -->
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Performance as SLA -->
-                        <div class="col-md-6">
-                            <div class="card mb-4">
-                                <div
-                                    class="card-header mt-2 border-0 bg-transparent d-flex justify-content-between align-items-center">
-                                    <h5 class="card-title mb-0">Performance as SLA</h5>
-                                    <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
-                                </div>
-                                <hr>
-                                <div class="card-body">
-                                    <div id="progressBars">
-                                        <!-- Progress bar 1 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">A Dule Pyle</div>
+
+                            <div class="col-md-6">
+                                <div class="card widget-card border-light shadow-sm">
+                                    <div class="card-body p-4">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5 class="card-title widget-card-title mb-1">Shipment by Carrier</h5>
+                                            <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
+                                        </div>
+                                        <p class="fs-7 text-secondary mb-4">Overview</p>
+                                        <div id="bsb-chart-7-small-2" class="mb-4"></div>
+                                        <div class="row gy-4">
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-primary-subtle text-primary rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-display"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">AAA Coooper</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-primary-subtle text-primary rounded-2 py-1 px-2">60%</span>
+                                                        </h6>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-                                                        aria-valuemax="100">Delhi Road | 70%</div>
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-success-subtle text-success rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-tablet"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">Artur</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-success-subtle text-success rounded-2 py-1 px-2">25%</span>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <div
+                                                                    class="fs-5 bsb-w-50 bsb-h-50 bg-danger-subtle text-danger rounded-2 d-flex align-items-center justify-content-center me-3">
+                                                                    <i class="bi bi-phone"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="m-0">A Duie Pyle</h6>
+                                                                <p class="text-secondary m-0 fs-7">since last week</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h6
+                                                            class="fs-7 d-flex align-items-center justify-content-end m-0">
+                                                            <span
+                                                                class="bg-danger-subtle text-danger rounded-2 py-1 px-2">15%</span>
+                                                        </h6>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Progress bar 2 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">Coyote Logistics</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">Mumbai | 40%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 3 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">Estes Express</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 80%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">Lucknow | 80%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 4 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">New England Motor Freight</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 30%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">Bangaolre | 30%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 5 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">R+L Carriers</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 49%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">Pune | 49%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 6 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">Southeastern Freight Lines</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">Simla | 40%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 7 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">UPS Freight</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 35%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">Kerla | 35%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 8 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">UPS Parcel</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 67%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">Siwan | 67%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 9 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">Westgate Global Logistics</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 29%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">BTM | 29%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 10 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">XPO Logistics</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 90%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">Mathura | 90%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Progress bar 11 -->
-                                        <div class="row align-items-center border-bottom pb-2">
-                                            <div class="col-4 text-end border-end pe-2">
-                                                <!-- Align label text to the right and add right border -->
-                                                <div class="progress-month">YRC Freight</div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="progress w-100">
-                                                    <div class="progress-bar custom-progress-bar" role="progressbar"
-                                                        style="width: 68%" aria-valuenow="40" aria-valuemin="0"
-                                                        aria-valuemax="100">Punjab | 68%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Add more progress bars here -->
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+
+                            <div class="col-md-12">
+
+                                <div class="card">
+                                    <div class="card-header align-items-center d-flex">
+                                        <h4 class="card-title mb-0 flex-grow-1">Performance By SLA</h4>
+                                        <div class="flex-shrink-0">
+                                            <ul class="nav justify-content-end nav-pills card-header-pills"
+                                                role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-bs-toggle="tab" href="#primary"
+                                                        role="tab">
+                                                        <span class="d-block d-sm-none"><i
+                                                                class="fas fa-home"></i></span>
+                                                        <span class="d-none d-sm-block">View More</span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#secondary"
+                                                        role="tab">
+                                                        <span class="d-block d-sm-none"><i
+                                                                class="far fa-user"></i></span>
+                                                        <span class="d-none d-sm-block">Secondary</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#inbound" role="tab">
+                                                        <span class="d-block d-sm-none"><i
+                                                                class="far fa-envelope"></i></span>
+                                                        <span class="d-none d-sm-block"> Inbound</span>
+                                                    </a>
+                                                </li> -->
+                                            </ul>
+                                        </div>
+
+
+                                    </div><!-- end card header -->
+                                    <div class="card-body">
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content text-muted">
+
+                                            <!-- Primary Table -->
+                                            <div class="tab-pane active" id="primary" role="tabpanel">
+                                                <div class="table-rep-plugin">
+                                                    <div class="table-responsive mb-0 text-nowrap"
+                                                        data-pattern="priority-columns">
+                                                        <table id="example"
+                                                            class="table table-bordered table-condensed table-responsive">
+                                                            <thead class="bgColor">
+
+                                                                <tr>
+                                                                    <th>Company</th>
+                                                                    <th>Route </th>
+                                                                    <th>SLA Type</th>
+                                                                    <th>Performance</th>
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>A Dule Pyle</td>
+                                                                    <td>Delhi - Mumbai</td>
+                                                                    <td>Mac </td>
+                                                                    <td>70%</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>Coyote Logistics</td>
+                                                                    <td>Mumbai - Delhi</td>
+                                                                    <td>Trailer</td>
+                                                                    <td>80%</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>Estes Express</td>
+                                                                    <td>Lucknow - Delhi</td>
+                                                                    <td>Trailer</td>
+                                                                    <td>50%</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>A Dule Pyle</td>
+                                                                    <td>Delhi - Mumbai</td>
+                                                                    <td>Mac</td>
+                                                                    <td>70%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>A Dule Pyle</td>
+                                                                    <td>Delhi - Mumbai</td>
+                                                                    <td>Trailer</td>
+                                                                    <td>70%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>A Dule Pyle</td>
+                                                                    <td>Delhi - Mumbai</td>
+                                                                    <td>Mac</td>
+                                                                    <td>70%</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End of Primary Table -->
+
+                                        </div>
+                                        <!-- <button class="btn btn-primary">View More</button> -->
+
+                                    </div><!-- end card-body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
                         </div>
-                        <!-- End of Performance as SLA -->
                     </div>
-                    <!-- End of 2nd Row -->
+                    <!-- End of Performance By SLA -->
+
 
                     <!-- 3nd Row -->
                     <div class="row">
@@ -1135,74 +1326,832 @@
                             <div class="card mb-4">
                                 <div
                                     class="card-header mt-2 border-0 bg-transparent d-flex justify-content-between align-items-center">
-                                    <h5 class="card-title mb-0">Awarded Carriers By Month</h5>
+                                    <h5 class="card-title mb-0">Trailer SLA</h5>
                                     <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
                                 </div>
                                 <hr>
-                                <div class="card-body">
-                                    <div id="chart-container" class="container">
-                                        <div class="row pb-4">
-                                            <div class="col-lg-12">
-                                                <canvas id="myChart"></canvas>
+                                <div class="card-body table-bordered">
+                                    <div id="progressBars">
+                                        <!-- Progress bar 1 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">A Dule Pyle</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <!-- Progress bar 1 -->
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar " role="progressbar" style="width: 90%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month">90%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Delhi
+                                                        - Pune</span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <!-- Progress bar 2 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Coyote Logistics</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar " role="progressbar" style="width: 65%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month">65%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Delhi
+                                                        - Mumbai</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 3 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Estes Express</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar " role="progressbar" style="width: 70%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month">70%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Delhi
+                                                        - Mumbai </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 4 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">New England Motor Freight</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 80%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month">80%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Delhi
+                                                        - Lucknow</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 5 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">R+L Carriers</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month ">50%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Lucknow
+                                                        - Delhi</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 6 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">R+L Carriers</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month ">50%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Lucknow
+                                                        - Delhi</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 7 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">R+L Carriers</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month ">50%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Lucknow
+                                                        - Delhi</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Add more progress bars here -->
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Performance as SLA -->
+                        <!-- Performance as MAC SLA -->
                         <div class="col-md-6">
                             <div class="card mb-4">
                                 <div
                                     class="card-header mt-2 border-0 bg-transparent d-flex justify-content-between align-items-center">
-                                    <h5 class="card-title mb-0">Shipment Activity By Month </h5>
+                                    <h5 class="card-title mb-0">MAC SLA</h5>
                                     <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
                                 </div>
                                 <hr>
-                                <div class="card-body">
-                                    <div id="chart-container mt-5">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                              <canvas id="myChartmonth"></canvas>
-                                              <div class="chart-label">Pickup Date</div>
+                                <div class="card-body table-bordered">
+                                    <div id="progressBars">
+                                        <!-- Progress bar 1 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">A Dule Pyle</div>
                                             </div>
-                                          </div>
-                                          <div class="row">
-                                            <div class="col-lg-12">
-                                              <div id="chart-legend" style="text-align: center;"></div> 
+                                            <div class="col-8">
+                                                <!-- Progress bar 1 -->
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar " role="progressbar" style="width: 90%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month">90%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Delhi
+                                                        - Pune</span>
+                                                </div>
                                             </div>
-                                          </div>
                                         </div>
+                                        <!-- Progress bar 2 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Coyote Logistics</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar " role="progressbar" style="width: 65%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month">65%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Delhi
+                                                        - Mumbai</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 3 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">Estes Express</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar " role="progressbar" style="width: 70%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month">70%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Delhi
+                                                        - Mumbai </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 4 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">New England Motor Freight</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 80%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month">80%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Delhi
+                                                        - Lucknow</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 5 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">R+L Carriers</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month ">50%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Lucknow
+                                                        - Delhi</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 6 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">R+L Carriers</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month ">50%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Lucknow
+                                                        - Delhi</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Progress bar 7 -->
+                                        <div class="row align-items-center border-bottom pb-2 mt-2">
+                                            <div class="col-4 text-end border-end pe-2">
+                                                <!-- Align label text to the right and add right border -->
+                                                <div class="progress-month">R+L Carriers</div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="progress position-relative" style="height: 12px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;"
+                                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="progress-month ">50%</span>
+                                                    </div>
+                                                    <span
+                                                        class="progress-percent position-absolute end-0 top-50 translate-middle-y">Lucknow
+                                                        - Delhi</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Add more progress bars here -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- End of Performance as SLA -->
                     </div>
-                    <!-- end of 3rd row -->
-                </div>
-            </div>
-            <!-- container-fluid -->
-        </div>
-        <!-- End Page-content -->
-        <!-- test -->
+                    <!-- End of 3nd Row -->
 
-        <!-- end -->
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <script>document.write(new Date().getFullYear())</script> © Movidu.
+                    <!-- 3nd Row -->
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header align-items-center d-flex">
+                                    <h4 class="card-title mb-0 flex-grow-1">Performance as Per Bid</h4>
+                                    <div class="flex-shrink-0">
+                                        <ul class="nav justify-content-end nav-pills card-header-pills"
+                                            role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-bs-toggle="tab" href="#primary"
+                                                    role="tab">
+                                                    <span class="d-block d-sm-none"><i
+                                                            class="fas fa-home"></i></span>
+                                                    <span class="d-none d-sm-block">Primary</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#secondary"
+                                                    role="tab">
+                                                    <span class="d-block d-sm-none"><i
+                                                            class="far fa-user"></i></span>
+                                                    <span class="d-none d-sm-block">Secondary</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#inbound" role="tab">
+                                                    <span class="d-block d-sm-none"><i
+                                                            class="far fa-envelope"></i></span>
+                                                    <span class="d-none d-sm-block"> Inbound</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="flex-shrink-0 select-tab">
+                                                <select class="form-select" id="tabSelect" aria-label="Select Tab">
+                                                    <option value="#primary">Primary</option>
+                                                    <option value="#secondary">Secondary</option>
+                                                    <option value="#inbound">Inbound</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                            const tabSelect = document.getElementById('tabSelect');
+                                            tabSelect.addEventListener('change', function () {
+                                                const selectedTab = tabSelect.value;
+                                                const tabLink = document.querySelector(`.nav-link[href="${selectedTab}"]`);
+                                                tabLink.click();
+                                            });
+                                        });
+                                    </script>
+
+                                </div><!-- end card header -->
+                                <div class="card-body">
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content text-muted">
+
+                                        <!-- Primary Table -->
+                                        <div class="tab-pane active" id="primary" role="tabpanel">
+                                            <div class="table-rep-plugin">
+                                                <div class="table-responsive mb-0 text-nowrap"
+                                                    data-pattern="priority-columns">
+                                                    <table id="example"
+                                                        class="table table-bordered table-condensed table-responsive">
+                                                        <thead class="bgColor">
+                                                            <tr>
+                                                                <th></th>
+                                                                <th></th>
+                                                                <th></th>
+                                                                <th></th>
+                                                                <th></th>
+                                                                <th></th>
+                                                                <th></th>
+                                                                <th class="text-center font-size-20" colspan="5">LSP
+                                                                    Quote</th>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Name</th>
+                                                                <th>Ownership Type </th>
+                                                                <th>Cluster</th>
+                                                                <th>One Way Two Way</th>
+                                                                <th>Sending</th>
+                                                                <th>Receiving Town</th>
+                                                                <th>Annual Volume 2024 (18MT Equivalent) - Trucks
+                                                                </th>
+                                                                <th>SLA per day</th>
+                                                                <th>MAC Rate 18MT 32ft</th>
+                                                                <th>MAC(Multi Axle Carrier) Supply Per day (SLA)
+                                                                </th>
+                                                                <th>Trailer Rate 24MT 40ft flat bed</th>
+                                                                <th>TLR Supply Per day (SLA)</th>
+
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Ram Charan
+                                                                </td>
+                                                                <td>
+                                                                    Private Ltd.
+                                                                </td>
+                                                                <td>South</td>
+                                                                <td>One Way</td>
+                                                                <td>Bangalore</td>
+                                                                <td>Chennai</td>
+                                                                <td>1500</td>
+                                                                <td>8</td>
+                                                                <td>22000</td>
+                                                                <td>5</td>
+                                                                <td>26000</td>
+                                                                <td>4</td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    Ram Charan
+                                                                </td>
+                                                                <td>
+                                                                    Private Ltd.
+                                                                </td>
+                                                                <td>South</td>
+                                                                <td>One Way</td>
+                                                                <td>Bangalore</td>
+                                                                <td>Chennai</td>
+                                                                <td>1500</td>
+                                                                <td>8</td>
+                                                                <td>22000</td>
+                                                                <td>5</td>
+                                                                <td>26000</td>
+                                                                <td>4</td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    Ram Charan
+                                                                </td>
+                                                                <td>
+                                                                    Private Ltd.
+                                                                </td>
+                                                                <td>South</td>
+                                                                <td>One Way</td>
+                                                                <td>Bangalore</td>
+                                                                <td>Chennai</td>
+                                                                <td>1500</td>
+                                                                <td>8</td>
+                                                                <td>22000</td>
+                                                                <td>5</td>
+                                                                <td>26000</td>
+                                                                <td>4</td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    Ram Charan
+                                                                </td>
+                                                                <td>
+                                                                    Private Ltd.
+                                                                </td>
+                                                                <td>South</td>
+                                                                <td>One Way</td>
+                                                                <td>Bangalore</td>
+                                                                <td>Chennai</td>
+                                                                <td>1500</td>
+                                                                <td>8</td>
+                                                                <td>22000</td>
+                                                                <td>5</td>
+                                                                <td>26000</td>
+                                                                <td>4</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Ram Charan
+                                                                </td>
+                                                                <td>
+                                                                    Private Ltd.
+                                                                </td>
+                                                                <td>South</td>
+                                                                <td>One Way</td>
+                                                                <td>Bangalore</td>
+                                                                <td>Chennai</td>
+                                                                <td>1500</td>
+                                                                <td>8</td>
+                                                                <td>22000</td>
+                                                                <td>5</td>
+                                                                <td>26000</td>
+                                                                <td>4</td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    Ram Charan
+                                                                </td>
+                                                                <td>
+                                                                    Private Ltd.
+                                                                </td>
+                                                                <td>South</td>
+                                                                <td>One Way</td>
+                                                                <td>Bangalore</td>
+                                                                <td>Chennai</td>
+                                                                <td>1500</td>
+                                                                <td>8</td>
+                                                                <td>22000</td>
+                                                                <td>5</td>
+                                                                <td>26000</td>
+                                                                <td>4</td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    Ram Charan
+                                                                </td>
+                                                                <td>
+                                                                    Private Ltd.
+                                                                </td>
+                                                                <td>South</td>
+                                                                <td>One Way</td>
+                                                                <td>Bangalore</td>
+                                                                <td>Chennai</td>
+                                                                <td>1500</td>
+                                                                <td>8</td>
+                                                                <td>22000</td>
+                                                                <td>5</td>
+                                                                <td>26000</td>
+                                                                <td>4</td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End of Primary Table -->
+
+                                    </div>
+                                    <!-- <button class="btn btn-primary">View More</button> -->
+
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div><!-- end col -->
                     </div>
-                    <div class="col-sm-6">
-                        <div class="text-sm-end d-none d-sm-block">
-                            Design & Develop by <a href="#!" class="text-decoration-underline">MS</a>
+
+
+
+                    <!-- 3nd Row -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div
+                                    class="card-header mt-2 border-0 bg-transparent d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">Trailer Bid</h5>
+                                    <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
+                                </div>
+                                <hr>
+                                <div style="width: 100%;">
+                                    <canvas id="myChart1"></canvas>
+                                </div>
+                            </div>
+                            <script>
+                                // Data
+                                const data2 = {
+                                    labels: ["A Dule Pyle", "Coyote Logistics", "Estes Express", "New England Motor Freight", "R+L Carriers", "Southeastern Freight Lines", "UPS Freight", "UPS Parcel", "Westgate Global Logistics", "XPO Logistics", "YRC Freight"],
+                                    datasets: [
+                                        {
+                                            label: "Performance (%)",
+                                            backgroundColor: "rgba(75, 192, 192, 0.2)",
+                                            borderColor: "rgba(75, 192, 192, 1)",
+                                            borderWidth: 1,
+                                            data: [70, 40, 80, 30, 49, 40, 35, 67, 29, 90, 68] // Performance data
+                                        }
+                                    ]
+                                };
+
+                                // Configuration
+                                const config2 = {
+                                    type: 'bar',
+                                    data: data2,
+                                    options: {
+                                        maintainAspectRatio: false, // Make the chart responsive
+                                        plugins: {
+                                            legend: {
+                                                position: 'top',
+                                            },
+
+                                        },
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true,
+                                                title: {
+                                                    display: true,
+                                                    text: 'Performance (%)'
+                                                }
+                                            }
+                                        }
+                                    },
+                                };
+
+                                // Create the chart
+                                var myChart1 = new Chart(
+                                    document.getElementById('myChart1'),
+                                    config2
+                                );
+                            </script>
                         </div>
+
+                        <!-- Performance as MAC SLA -->
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div
+                                    class="card-header mt-2 border-0 bg-transparent d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">MAC Bid</h5>
+                                    <button type="button" class="btn btn-sm btn-primary viewReport">View Report</button>
+                                </div>
+                                <hr>
+                                <div style="width: 100%;">
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+
+
+                            <script>
+                                // Data
+                                const data = {
+                                    labels: ["A Dule Pyle", "Coyote Logistics", "Estes Express", "New England Motor Freight", "R+L Carriers", "Southeastern Freight Lines", "UPS Freight", "UPS Parcel", "Westgate Global Logistics", "XPO Logistics", "YRC Freight"],
+                                    datasets: [
+                                        {
+                                            label: "Performance (%)",
+                                            backgroundColor: "rgba(75, 192, 192, 0.2)",
+                                            borderColor: "rgba(75, 192, 192, 1)",
+                                            borderWidth: 1,
+                                            data: [70, 40, 80, 30, 49, 40, 35, 67, 29, 90, 68] // Performance data
+                                        }
+                                    ]
+                                };
+
+                                // Configuration
+                                const config = {
+                                    type: 'bar',
+                                    data: data,
+                                    options: {
+                                        maintainAspectRatio: false, // Make the chart responsive
+                                        plugins: {
+                                            legend: {
+                                                position: 'top',
+                                            },
+
+                                        },
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true,
+                                                title: {
+                                                    display: true,
+                                                    text: 'Performance (%)'
+                                                }
+                                            }
+                                        }
+                                    },
+                                };
+
+                                // Create the chart
+                                var myChart = new Chart(
+                                    document.getElementById('myChart'),
+                                    config
+                                );
+                            </script>
+
+                        </div>
+                        <!-- End of Performance as SLA -->
+                    </div>
+                    <!-- End of 3nd Row -->
+                   
+                    <div class="col-md-12">
+
+                        <div class="card">
+                            <div class="card-header align-items-center d-flex">
+                                <h4 class="card-title mb-0 flex-grow-1">Performance By SLA</h4>
+                                <div class="flex-shrink-0">
+                                    <ul class="nav justify-content-end nav-pills card-header-pills"
+                                        role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#primary"
+                                                role="tab">
+                                                <span class="d-block d-sm-none"><i
+                                                        class="fas fa-home"></i></span>
+                                                <span class="d-none d-sm-block">View More</span>
+                                            </a>
+                                        </li>
+                                        <!-- <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#secondary"
+                                                role="tab">
+                                                <span class="d-block d-sm-none"><i
+                                                        class="far fa-user"></i></span>
+                                                <span class="d-none d-sm-block">Secondary</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#inbound" role="tab">
+                                                <span class="d-block d-sm-none"><i
+                                                        class="far fa-envelope"></i></span>
+                                                <span class="d-none d-sm-block"> Inbound</span>
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+
+
+                            </div><!-- end card header -->
+                            <div class="card-body">
+
+                                <!-- Tab panes -->
+                                <div class="tab-content text-muted">
+
+                                    <!-- Primary Table -->
+                                    <div class="tab-pane active" id="primary" role="tabpanel">
+                                        <div class="table-rep-plugin">
+                                            <div class="table-responsive mb-0 text-nowrap"
+                                                data-pattern="priority-columns">
+                                                <table id="example"
+                                                    class="table table-bordered table-condensed table-responsive">
+                                                    <thead class="bgColor">
+
+                                                        <tr>
+                                                            <th>Company Name</th>
+                                                            <th>Owner Name</th>
+                                                            <th>Company Age (Years)</th>
+                                                            <th>Minimum Revenue</th>
+                                                            <th>Average Revenue</th>
+                                                            <th>Submitted Documents</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Maxton</td>
+                                                            <td>John Doe</td>
+                                                            <td>5</td>
+                                                            <td>2000000 INR</td>
+                                                            <td>1500000 INR</td>
+                                                            <td>All</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Greenland Coop</td>
+                                                            <td>Jane</td>
+                                                            <td>5</td>
+                                                            <td>2000000 INR</td>
+                                                            <td>1500000 INR</td>
+                                                            <td>All</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Farmland Industries Inc.</td>
+                                                            <td>Robert</td>
+                                                            <td>5</td>
+                                                            <td>2000000 INR</td>
+                                                            <td>1500000 INR</td>
+                                                            <td>All</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Rolexso</td>
+                                                            <td>Rayna</td>
+                                                            <td>5</td>
+                                                            <td>2000000 INR</td>
+                                                            <td>1500000 INR</td>
+                                                            <td>All</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Titaniumcoin Foundation</td>
+                                                            <td>John</td>
+                                                            <td>5</td>
+                                                            <td>2000000 INR</td>
+                                                            <td>1500000 INR</td>
+                                                            <td>All</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Titaniumcoin Foundation</td>
+                                                            <td>Mike</td>
+                                                            <td>5</td>
+                                                            <td>2000000 INR</td>
+                                                            <td>1500000 INR</td>
+                                                            <td>All</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Primary Table -->
+
+                                </div>
+                                <!-- <button class="btn btn-primary">View More</button> -->
+
+                            </div><!-- end card-body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+
+
+                </div>
+                <!-- end of 3rd row -->
+            </div>
+        </div>
+        <!-- container-fluid -->
+    </div>
+    <!-- End Page-content -->
+    <!-- test -->
+
+    <!-- end -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <script>document.write(new Date().getFullYear())</script> © Movidu.
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-sm-end d-none d-sm-block">
+                        Design & Develop by <a href="#!" class="text-decoration-underline">MS</a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div>
     <!-- end main content-->
 
@@ -1371,202 +2320,7 @@
     <script src="../assets/js/app.js"></script>
 
 
-    <!-- 3rd Row Chart Script -->
-    <!-- Awarded Carriers By Month -->
-    <script>
-        // Sample data for demonstration
-        const labels = [];
-        const data1 = [];
-        const data2 = [];
-        const data3 = [];
-        const data4 = [];
-        const data5 = [];
-        const data6 = [];
 
-        // Generate sample data for 12 months (2024)
-        for (let i = 1; i <= 12; i++) {
-            const month = i;
-            const year = 2024;
-            labels.push(getMonthName(month) + ' ' + year);
-            data1.push(Math.floor(Math.random() * 100)); // Random data for dataset 1
-            data2.push(Math.floor(Math.random() * 100)); // Random data for dataset 2
-            data3.push(Math.floor(Math.random() * 100)); // Random data for dataset 3
-            data4.push(Math.floor(Math.random() * 100)); // Random data for dataset 4
-            data5.push(Math.floor(Math.random() * 100)); // Random data for dataset 5
-            data6.push(Math.floor(Math.random() * 100)); // Random data for dataset 6
-        }
-
-        // Create a chart
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'UPS Parcel',
-                    data: data1,
-                    backgroundColor: 'rgb(255, 99, 132)',
-                    borderWidth: 1
-                }, {
-                    label: 'A Duje Pyle',
-                    data: data2,
-                    backgroundColor: 'rgb(54, 162, 235)',
-                    borderWidth: 1
-                }, {
-                    label: 'AAA Cooper',
-                    data: data3,
-                    backgroundColor: 'rgb(75, 192, 192)',
-                    borderWidth: 1
-                }, {
-                    label: 'Estesl',
-                    data: data4,
-                    backgroundColor: 'rgb(255, 205, 86)',
-                    borderWidth: 1
-                }, {
-                    label: 'HHH Parcel',
-                    data: data5,
-                    backgroundColor: 'rgb(153, 102, 255)',
-                    borderWidth: 1
-                }, {
-                    label: 'XYZ Cooper',
-                    data: data6,
-                    backgroundColor: 'rgb(255, 159, 64)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-                    xAxes: [{
-                        ticks: {
-                            autoSkip: false,
-                            maxRotation: 45,
-                            minRotation: 45
-                        }
-                    }]
-                }
-            }
-        });
-
-        // Function to get month name
-        function getMonthName(month) {
-            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            return monthNames[month - 1];
-        }
-    </script>
-    <!-- End Awarded Carriers By Month -->
-    <!-- End of 3r Row Script -->
-
-    <!-- Doanat Chart -->
-    <!-- Bootstrap JavaScript -->
-
-    <script>
-        // Initialize ApexCharts
-        var options1 = {
-            chart: {
-                type: 'donut',
-                height: '200', // Adjust height as needed
-            },
-            series: [60, 25, 15], // Example data
-            labels: ['Desktop', 'Tablet', 'Mobile'], // Example labels
-            colors: ['#007bff', '#28a745', '#dc3545'], // Example colors
-            dataLabels: {
-                enabled: true, // Enable data labels
-                formatter: function (val, opts) {
-                    return opts.w.globals.labels[opts.seriesIndex] + ": " + val + "%";
-                }
-            },
-        };
-
-        var options2 = {
-            chart: {
-                type: 'donut',
-                height: '200', // Adjust height as needed
-            },
-            series: [70, 20, 10], // Example data
-            labels: ['Desktop', 'Tablet', 'Mobile'], // Example labels
-            colors: ['#007bff', '#28a745', '#dc3545'], // Example colors
-            dataLabels: {
-                enabled: true, // Enable data labels
-                formatter: function (val, opts) {
-                    return opts.w.globals.labels[opts.seriesIndex] + ": " + val + "%";
-                }
-            },
-        };
-
-        var chart1 = new ApexCharts(document.getElementById("bsb-chart-7-small-1"), options1);
-        chart1.render();
-
-        var chart2 = new ApexCharts(document.getElementById("bsb-chart-7-small-2"), options2);
-        chart2.render();
-    </script>
-
-    <!-- Shipment Activity Script -->
-    <script>
-        // Sample data for demonstration
-        let months = [];
-        const data = [];
-    
-        // Generate sample data for 24 months (2 years)
-        for (let i = 0; i < 24; i++) {
-          const month = (i % 12 === 0) ? 1 : (i % 12) + 1;
-          const year = 2023 + Math.floor(i / 12);
-          months.push(getMonthName(month) + ' ' + year);
-          if (i === 0) {
-            data.push(0); // Start from 0 for the first month
-          } else {
-            data.push(Math.floor(Math.random() * 100)); // Random data for other months
-          }
-        }
-    
-        // Create a chart
-        var ctx = document.getElementById('myChartmonth').getContext('2d');
-        var myChartmonth = new Chart(ctx, {
-          type: 'line', // Use line chart type
-          data: {
-            labels: months,
-            datasets: [{
-              label: "Record Count",
-              data: data,
-              borderColor: "rgb(0, 123, 255)",
-              borderWidth: 2,
-              backgroundColor: "transparent",
-              fill: false
-            }]
-          },
-          options: {
-            scales: {
-              xAxes: [{
-                reverse: true,
-                gridLines: {
-                  color: "rgba(0,0,0,0.05)"
-                }
-              }],
-              yAxes: [{
-                ticks: {
-                  beginAtZero: true // Start y-axis at 0
-                },
-                borderDash: [5, 5],
-                gridLines: {
-                  color: "rgba(0,0,0,0)",
-                  fontColor: "#fff"
-                }
-              }]
-            }
-          }
-        });
-    
-        // Function to get abbreviated month name
-        function getMonthName(month) {
-          const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-          return monthNames[month - 1];
-        }
-      </script>
-    <!-- end -->
 
 </body>
 

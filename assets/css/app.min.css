@@ -5727,7 +5727,7 @@ body[data-layout=horizontal] .chat-conversation {
     width: 70px; /* Adjust as needed */
   }
   .download-icon {
-    float: right;
+    /* float: right; */
     margin-left: 10px;
   }
   .download-icon:hover {
